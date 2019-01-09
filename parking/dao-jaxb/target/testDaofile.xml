@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entityList>
+    <lastEntityId>4</lastEntityId>
+    <entities>
+        <entity>
+            <id>1</id>
+            <field_A>field_A_0</field_A>
+            <field_B>field_B_0</field_B>
+            <field_C>field_C_0</field_C>
+        </entity>
+        <entity>
+            <id>3</id>
+            <field_A>field_A_Update</field_A>
+            <field_B>field_B_Update</field_B>
+            <field_C>field_C_2</field_C>
+        </entity>
+        <entity>
+            <id>4</id>
+            <field_A>field_A_3</field_A>
+            <field_B>field_B_3</field_B>
+            <field_C>field_C_3</field_C>
+        </entity>
+    </entities>
+</entityList>

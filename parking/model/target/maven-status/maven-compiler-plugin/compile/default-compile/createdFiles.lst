@@ -1,0 +1,7 @@
+org\kevin\carpark\model\EntityList.class
+org\kevin\carpark\model\RestInterface.class
+org\kevin\carpark\model\ServiceFacade.class
+org\kevin\carpark\model\Entity.class
+org\kevin\carpark\model\EntityDAO.class
+org\kevin\carpark\model\ServiceFactory.class
+org\kevin\carpark\model\ReplyMessage.class
