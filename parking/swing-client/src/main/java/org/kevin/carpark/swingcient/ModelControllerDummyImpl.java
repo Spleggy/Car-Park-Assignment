@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.kevin.carpark.model.Entity;
+import org.kevin.carpark.model.TicketMachine;
 
 /**
  *
@@ -20,35 +20,35 @@ public class ModelControllerDummyImpl implements ModelController {
 
     private static final Logger LOG = LoggerFactory.getLogger(ModelControllerDummyImpl.class);
 
-    private EntityListTableModel entityListTableModel = null;
+    private EntityListTableModel ticketMachineListTableModel = null;
 
     private void initialiseTableModel() {
 
-        entityListTableModel = new EntityListTableModel();
-        List<Entity> elist = new ArrayList<Entity>();
+        ticketMachineListTableModel = new EntityListTableModel();
+        List<TicketMachine> elist = new ArrayList<TicketMachine>();
 
         int ENTITY_NUMBER = 40;
         for (int intityId = 0; intityId < ENTITY_NUMBER; intityId++) {
-            Entity entity = new Entity();
+            TicketMachine entity = new TicketMachine();
             entity.setId(intityId);
             entity.setField_A("field_A_" + intityId);
-            entity.setField_B("field_B_" + intityId);;
-            entity.setField_C("field_C_" + intityId);;
+            entity.setField_B("field_B_" + intityId);
+            entity.setField_C("field_C_" + intityId);
             elist.add(entity);
         }
-        entityListTableModel.setEntities(elist);
+        ticketMachineListTableModel.setEntities(elist);
     }
 
     @Override
     public EntityListTableModel getEntityListTableModel() {
-        if (entityListTableModel == null) {
+        if (ticketMachineListTableModel == null) {
             synchronized (ModelControllerDummyImpl.class) {
-                if (entityListTableModel == null) {
+                if (ticketMachineListTableModel == null) {
                     initialiseTableModel();
                 }
             }
         }
-        return entityListTableModel;
+        return ticketMachineListTableModel;
 
     }
     
@@ -60,7 +60,7 @@ public class ModelControllerDummyImpl implements ModelController {
     }
 
     @Override
-    public void findMatchingSearch(Entity templateEntity) {
+    public void findMatchingSearch(TicketMachine templateEntity) {
         LOG.debug("find matching with templateEntity="+templateEntity);
     }
 

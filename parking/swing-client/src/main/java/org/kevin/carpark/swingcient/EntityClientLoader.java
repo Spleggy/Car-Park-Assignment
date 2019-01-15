@@ -14,8 +14,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import javax.ws.rs.core.MediaType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.kevin.carpark.model.Entity;
-import org.kevin.carpark.model.EntityDAO;
+import org.kevin.carpark.model.TicketMachine;
+import org.kevin.carpark.model.TicketMachineDAO;
 import org.kevin.carpark.model.ReplyMessage;
 import org.kevin.carpark.web.rest.client.RestClientJerseyImpl;
 
@@ -31,7 +31,7 @@ public class EntityClientLoader {
 
     private ScheduledFuture<?> schedulerHandle = null;
 
-    private EntityDAO entityDAO = null;
+    private TicketMachineDAO ticketMachineDAO = null;
 
     private String baseUrl = "http://localhost:8680/";
 
@@ -50,8 +50,8 @@ public class EntityClientLoader {
         return totalClientRetrieveSuccessful.get();
     }
 
-    public EntityClientLoader(EntityDAO entityDAO, String baseUrl) {
-        this.entityDAO = entityDAO;
+    public EntityClientLoader(TicketMachineDAO ticketMachineDAO, String baseUrl) {
+        this.ticketMachineDAO = ticketMachineDAO;
         this.baseUrl = baseUrl;
         restClient = new RestClientJerseyImpl(baseUrl, mediaType);
     }
@@ -59,29 +59,29 @@ public class EntityClientLoader {
     // synchronized so that can only run one call at a time
     public synchronized boolean restClientRetrieveAll() {
 
-        Entity entityTempate = new Entity();
+        TicketMachine ticketMachineTemplate = new TicketMachine();
         // you could add a filter value here but leaving values null retrieves all values
         // e.g entityTempate.setField_A("xxxx");
 
         // try to retreive a list of entities
         try {
-            ReplyMessage replyMessage = restClient.retrieveMatchingEntites(entityTempate);
+            ReplyMessage replyMessage = restClient.retrieveMatchingTicketMachine(ticketMachineTemplate);
             if (replyMessage.getCode() == 200) {
 
-                List<Entity> entityList = replyMessage.getEntityList().getEntities();
+                List<TicketMachine> ticketMachineList = replyMessage.getTicketMachineList().getTicketMachines();
 
                 if (LOG.isDebugEnabled()) {
-                    StringBuffer sb = new StringBuffer("Received " + entityList.size() + " Entities");
-                    for (Entity e : entityList) {
+                    StringBuffer sb = new StringBuffer("Received " + ticketMachineList.size() + " Entities");
+                    for (TicketMachine e : ticketMachineList) {
                         sb.append("\n   " + e);
                     }
                     LOG.debug(sb.toString());
                 }
 
                 // note that each entity will have a new id which is unique to local dao instance
-                entityDAO.deleteAllEntities();
-                for (Entity newEntity : entityList) {
-                    entityDAO.createEntity(newEntity);
+                ticketMachineDAO.deleteAllTicketMachines();
+                for (TicketMachine newTicketMachine : ticketMachineList) {
+                    ticketMachineDAO.createTicketMachine(newTicketMachine);
                 }
 
                 return true;

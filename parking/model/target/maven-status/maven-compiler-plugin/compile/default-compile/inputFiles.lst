@@ -1,7 +1,7 @@
-C:\Users\bogto\Desktop\gitrepos\CarParkAssignment\parking\model\src\main\java\org\kevin\carpark\model\Entity.java
-C:\Users\bogto\Desktop\gitrepos\CarParkAssignment\parking\model\src\main\java\org\kevin\carpark\model\ServiceFactory.java
-C:\Users\bogto\Desktop\gitrepos\CarParkAssignment\parking\model\src\main\java\org\kevin\carpark\model\ServiceFacade.java
-C:\Users\bogto\Desktop\gitrepos\CarParkAssignment\parking\model\src\main\java\org\kevin\carpark\model\EntityDAO.java
-C:\Users\bogto\Desktop\gitrepos\CarParkAssignment\parking\model\src\main\java\org\kevin\carpark\model\ReplyMessage.java
-C:\Users\bogto\Desktop\gitrepos\CarParkAssignment\parking\model\src\main\java\org\kevin\carpark\model\EntityList.java
-C:\Users\bogto\Desktop\gitrepos\CarParkAssignment\parking\model\src\main\java\org\kevin\carpark\model\RestInterface.java
+C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\model\src\main\java\org\kevin\carpark\model\TicketMachineDAO.java
+C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\model\src\main\java\org\kevin\carpark\model\ServiceFacade.java
+C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\model\src\main\java\org\kevin\carpark\model\RestInterface.java
+C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\model\src\main\java\org\kevin\carpark\model\TicketMachineList.java
+C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\model\src\main\java\org\kevin\carpark\model\ReplyMessage.java
+C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\model\src\main\java\org\kevin\carpark\model\TicketMachine.java
+C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\model\src\main\java\org\kevin\carpark\model\ServiceFactory.java

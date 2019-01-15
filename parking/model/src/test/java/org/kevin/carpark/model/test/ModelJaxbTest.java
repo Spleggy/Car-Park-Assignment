@@ -25,7 +25,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.kevin.carpark.model.Entity;
+import org.kevin.carpark.model.TicketMachine;
 import org.kevin.carpark.model.ReplyMessage;
 
 /**
@@ -58,15 +58,15 @@ public class ModelJaxbTest {
             replyMessage1.setCode(200);
             replyMessage1.setDebugMessage("debug message 1");
 
-            List<Entity> entities = replyMessage1.getEntityList().getEntities();
+            List<TicketMachine> ticketMachines = replyMessage1.getTicketMachineList().getTicketMachines();
 
             for (int intityId = 0; intityId < 3; intityId++) {
-                Entity entity = new Entity();
+                TicketMachine entity = new TicketMachine();
                 entity.setId(intityId);
-                entity.setField_A("field_A_" + intityId);
-                entity.setField_B("field_B_" + intityId);;
-                entity.setField_C("field_C_" + intityId);;
-                entities.add(entity);
+                entity.setField_A("Start Time" + intityId);
+                entity.setField_B("Price Per Hour" + intityId);
+                entity.setField_C("field_C_" + intityId);
+                ticketMachines.add(entity);
             }
 
             // marshal the object lists to system out, a file and a stringWriter

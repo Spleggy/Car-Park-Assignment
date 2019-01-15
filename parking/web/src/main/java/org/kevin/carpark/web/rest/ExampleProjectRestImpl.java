@@ -10,16 +10,14 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 
 import javax.ws.rs.Path;
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.kevin.carpark.model.Entity;
+import org.kevin.carpark.model.TicketMachine;
 import org.kevin.carpark.model.ReplyMessage;
 import org.kevin.carpark.model.ServiceFacade;
 import org.kevin.carpark.web.WebObjectFactory;
@@ -37,21 +35,21 @@ public class ExampleProjectRestImpl {
     @Path("/retrievematching")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public Response retrieveMatchingEntites(Entity entityTemplate) {
+    public Response retrieveMatchingTicketMachines(TicketMachine ticketMachineTemplate) {
 
         try {
-            if (entityTemplate == null) {
-                throw new IllegalArgumentException("entityTemplate request parameter must be set");
+            if (ticketMachineTemplate == null) {
+                throw new IllegalArgumentException("Ticket Schedule Template request parameter must be set");
             }
             ReplyMessage replyMessage = new ReplyMessage();
 
             ServiceFacade serviceFacade = WebObjectFactory.getServiceFactory().getServiceFacade();
-            List<Entity> eList = serviceFacade.retrieveMatchingEntities(entityTemplate);
+            List<TicketMachine> eList = serviceFacade.retrieveMatchingTicketMachines(ticketMachineTemplate);
 
-            LOG.debug("/retrievematching entityTemplate: " + entityTemplate 
+            LOG.debug("/retrievematching entityTemplate: " + ticketMachineTemplate
                     + " found " + eList.size() + "entities");
 
-            replyMessage.getEntityList().getEntities().addAll(eList);
+            replyMessage.getTicketMachineList().getTicketMachines().addAll(eList);
 
             replyMessage.setCode(Response.Status.OK.getStatusCode());
 
@@ -79,10 +77,10 @@ public class ExampleProjectRestImpl {
             ReplyMessage replyMessage = new ReplyMessage();
 
             ServiceFacade serviceFacade = WebObjectFactory.getServiceFactory().getServiceFacade();
-            Entity entity = serviceFacade.retrieveEntity(id);
+            TicketMachine entity = serviceFacade.retrieveTicketMachine(id);
             if (entity != null) {
                 LOG.debug("/retrieve id=" + id + " found entity :" + entity);
-                replyMessage.getEntityList().getEntities().add(entity);
+                replyMessage.getTicketMachineList().getTicketMachines().add(entity);
 
                 replyMessage.setCode(Response.Status.OK.getStatusCode());
                 return Response.status(Response.Status.OK).entity(replyMessage).build();

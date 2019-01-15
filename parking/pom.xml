@@ -95,6 +95,6 @@
     <module>service</module>
     <module>web</module>
     <module>rest-client</module>
-    <module>swing-client</module>
+    <!-- <module>swing-client</module> -->
   </modules>
 </project>

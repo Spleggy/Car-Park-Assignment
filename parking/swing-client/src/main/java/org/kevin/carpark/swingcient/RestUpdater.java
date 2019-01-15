@@ -5,23 +5,23 @@
  */
 package org.kevin.carpark.swingcient;
 
-import org.kevin.carpark.model.EntityDAO;
+import org.kevin.carpark.model.TicketMachineDAO;
 
 /**
  *
  * @author cgallen
  */
 public class RestUpdater {
-    EntityDAO entityDAO = null;
+    TicketMachineDAO ticketMachineDAO = null;
     String updatechron ="";
     String baseUrl = "";
     
-    public EntityDAO getEntityDAO() {
-        return entityDAO;
+    public TicketMachineDAO getTicketMachineDAO() {
+        return ticketMachineDAO;
     }
 
-    public void setEntityDAO(EntityDAO entityDAO) {
-        this.entityDAO = entityDAO;
+    public void setTicketMachineDAO(TicketMachineDAO ticketMachineDAO) {
+        this.ticketMachineDAO = ticketMachineDAO;
     }
 
     public String getUpdatechron() {

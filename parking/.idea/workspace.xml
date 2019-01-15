@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="01c8bbcd-a2af-40dc-b30b-ff8461a823f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketMachineDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketMachineList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/AddOrModifyMachine.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/ListMachines.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/src/main/java/org/kevin/carpark/dao/jaxbimpl/EntityDAOJaxbImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/src/main/java/org/kevin/carpark/dao/jaxbimpl/TicketMachineDAOJaxbImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/src/test/java/org/kevin/carpark/dao/jaxbimpl/test/EntityDAOJaxbImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/src/test/java/org/kevin/carpark/dao/jaxbimpl/test/TicketMachineDAOJaxbImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/appLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/target/appLog.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/classes/org/kevin/carpark/dao/jaxbimpl/EntityDAOJaxbImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/parking-dao-jaxb-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/target/parking-dao-jaxb-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/surefire-reports/TEST-org.kevin.carpark.dao.jaxbimpl.test.EntityDAOJaxbImplTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/surefire-reports/org.kevin.carpark.dao.jaxbimpl.test.EntityDAOJaxbImplTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/test-classes/org/kevin/carpark/dao/jaxbimpl/test/EntityDAOJaxbImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao-jaxb/target/testDaofile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dao-jaxb/target/testDaofile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/EntityDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/EntityList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/ReplyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/ReplyMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/RestInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/RestInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/ServiceFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/ServiceFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/resources/org/kevin/carpark/model/jaxb.index" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/resources/org/kevin/carpark/model/jaxb.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/test/java/org/kevin/carpark/model/test/ModelJaxbTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/test/java/org/kevin/carpark/model/test/ModelJaxbTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/EntityDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/EntityList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/ReplyMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/ReplyMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/RestInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/RestInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/ServiceFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/ServiceFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/jaxb.index" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/org/kevin/carpark/model/jaxb.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/parking-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/parking-model-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/surefire-reports/TEST-org.kevin.carpark.model.test.ModelJaxbTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/surefire-reports/TEST-org.kevin.carpark.model.test.ModelJaxbTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/surefire-reports/org.kevin.carpark.model.test.ModelJaxbTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/surefire-reports/org.kevin.carpark.model.test.ModelJaxbTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/test-classes/org/kevin/carpark/model/test/ModelJaxbTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/test-classes/org/kevin/carpark/model/test/ModelJaxbTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/testData.xml" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/testData.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parking-uml/Class Diagrams/exampleprojectClassDiagram.cdg" beforeDir="false" afterPath="$PROJECT_DIR$/parking-uml/Class Diagrams/exampleprojectClassDiagram.cdg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-client/src/main/java/org/kevin/carpark/web/rest/client/RestClientJerseyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-client/src/main/java/org/kevin/carpark/web/rest/client/RestClientJerseyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-client/src/test/java/org/kevin/carpark/web/rest/client/test/manual/RestClientJerseyImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-client/src/test/java/org/kevin/carpark/web/rest/client/test/manual/RestClientJerseyImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-client/target/classes/org/kevin/carpark/web/rest/client/RestClientJerseyImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/rest-client/target/classes/org/kevin/carpark/web/rest/client/RestClientJerseyImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-client/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rest-client/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-client/target/parking-rest-client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rest-client/target/parking-rest-client-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-client/target/test-classes/org/kevin/carpark/web/rest/client/test/manual/RestClientJerseyImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/rest-client/target/test-classes/org/kevin/carpark/web/rest/client/test/manual/RestClientJerseyImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/org/kevin/carpark/service/ServiceFacadeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/org/kevin/carpark/service/ServiceFacadeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/org/kevin/carpark/service/ServiceFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/org/kevin/carpark/service/ServiceFactoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/test/java/org/kevin/carpark/service/test/ServiceFacadeImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/test/java/org/kevin/carpark/service/test/ServiceFacadeImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/appLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/appLog.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/org/kevin/carpark/service/ServiceFacadeImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/org/kevin/carpark/service/ServiceFacadeImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/org/kevin/carpark/service/ServiceFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/org/kevin/carpark/service/ServiceFactoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/parking-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/parking-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/surefire-reports/TEST-org.kevin.carpark.service.test.ServiceFacadeImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/surefire-reports/TEST-org.kevin.carpark.service.test.ServiceFacadeImplTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/surefire-reports/org.kevin.carpark.service.test.ServiceFacadeImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/surefire-reports/org.kevin.carpark.service.test.ServiceFacadeImplTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/test-classes/org/kevin/carpark/service/test/ServiceFacadeImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/test-classes/org/kevin/carpark/service/test/ServiceFacadeImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/testfile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/testfile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/EntityClientLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/EntityClientLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/EntityListTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/EntityListTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/ModelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/ModelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/ModelControllerDummyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/ModelControllerDummyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/ModelControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/ModelControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/RestUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/RestUpdater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/gui/ControlsJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/gui/ControlsJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/gui/EntityFieldsJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/gui/EntityFieldsJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/EntitySingleClientLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/EntitySingleClientLoaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/RestClientJerseyImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/RestClientJerseyImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/ScheduledEntityClientLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/ScheduledEntityClientLoaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/EntityClientLoader$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/EntityClientLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/EntityListTableModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/MainApp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/MainApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/ModelController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/ModelControllerDummyImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/ModelControllerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/RestUpdater.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/AppMainJFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/ControlsJPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/ControlsJPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/ControlsJPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/ControlsJPanel$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/ControlsJPanel$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/ControlsJPanel$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/ControlsJPanel$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/ControlsJPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/EntityFieldsJPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/EntityFieldsJPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/EntityFieldsJPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/EntityFieldsJPanel$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/EntityFieldsJPanel$IntegerInputVerifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/classes/org/kevin/carpark/swingcient/gui/EntityFieldsJPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/swing-client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/parking-swing-client-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/parking-swing-client-1.0-SNAPSHOT.one-jar.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/test-classes/org/kevin/carpark/swingcient/test/manual/EntitySingleClientLoaderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/test-classes/org/kevin/carpark/swingcient/test/manual/RestClientJerseyImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing-client/target/test-classes/org/kevin/carpark/swingcient/test/manual/ScheduledEntityClientLoaderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app-data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/app-data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/kevin/carpark/web/rest/ExampleProjectRestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/kevin/carpark/web/rest/ExampleProjectRestImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/AddOrModifyEntity.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/ListEntities.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/AddOrModifyEntity.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/ListEntities.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/org/kevin/carpark/web/rest/ExampleProjectRestImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/org/kevin/carpark/web/rest/ExampleProjectRestImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/AddOrModifyEntity.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/ListEntities.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/classes/AddOrModifyEntity.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/classes/ListEntities.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/classes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/classes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/classes/org/kevin/carpark/web/rest/ExampleProjectRestImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/classes/org/kevin/carpark/web/rest/ExampleProjectRestImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/lib/parking-dao-jaxb-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/lib/parking-dao-jaxb-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/lib/parking-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/lib/parking-model-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/lib/parking-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/WEB-INF/lib/parking-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/parking-web-1.0-SNAPSHOT/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/AddOrModifyEntity_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/ListEntities_jsp.java" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/rest-client/target/" />
+    <ignored path="$PROJECT_DIR$/web/target/" />
+    <ignored path="$PROJECT_DIR$/swing-client/target/" />
+    <ignored path="$PROJECT_DIR$/model/target/" />
+    <ignored path="$PROJECT_DIR$/service/target/" />
+    <ignored path="$PROJECT_DIR$/dao-jaxb/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/AddOrModifyMachine.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/ListMachines.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketMachine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#646#647#0" expanded="true" />
+                <element signature="e#677#678#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#764#765#0" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#828#829#0" expanded="true" />
+                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/src/test/java/org/kevin/carpark/model/TicketSchedule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+              <folding>
+                <element signature="e#211#212#0" expanded="true" />
+                <element signature="e#244#245#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
+                <element signature="e#575#576#0" expanded="true" />
+                <element signature="e#631#632#0" expanded="true" />
+                <element signature="e#679#680#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketScheduleList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ListS</find>
+      <find>persis</find>
+      <find>schedulelist</find>
+      <find>persistor</find>
+      <find>TicketSchedule</find>
+      <find>ticketSchedule</find>
+      <find>schedule</find>
+      <find>Entity</find>
+      <find>load</find>
+      <find>Rest</find>
+      <find>xmlelement</find>
+      <find>objectfactory</find>
+      <find>annotation</find>
+      <find>xml</find>
+      <find>@xml</find>
+      <find>EntityDAO</find>
+      <find>;;</find>
+      <find>uri</find>
+      <find>xmlelem</find>
+      <find>entityList</find>
+      <find>id</find>
+      <find>entity</find>
+      <find>field_a</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>TicketMachine</replace>
+      <replace>TicketMachineDAO</replace>
+      <replace>ticketMachineList</replace>
+      <replace>ticketMachineId</replace>
+      <replace>ticketMachine</replace>
+      <replace>location</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/Entity.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketSchedule.java" />
+        <option value="$PROJECT_DIR$/model/src/main/resources/org/kevin/carpark/model/jaxb.index" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketScheduleDAO.java" />
+        <option value="$PROJECT_DIR$/model/src/test/java/org/kevin/carpark/model/test/ModelJaxbTest.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/ServiceFacade.java" />
+        <option value="$PROJECT_DIR$/dao-jaxb/src/main/java/org/kevin/carpark/dao/jaxbimpl/EntityDAOJaxbImpl.java" />
+        <option value="$PROJECT_DIR$/dao-jaxb/src/test/java/org/kevin/carpark/dao/jaxbimpl/test/EntityDAOJaxbImplTest.java" />
+        <option value="$PROJECT_DIR$/service/src/test/java/org/kevin/carpark/service/test/ServiceFacadeImplTest.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/org/kevin/carpark/service/ServiceFactoryImpl.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/org/kevin/carpark/service/ServiceFacadeImpl.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/kevin/carpark/web/rest/ExampleProjectRestImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/ListEntities.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/AddOrModifyEntity.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/AddOrModifySchedule.jsp" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/RestInterface.java" />
+        <option value="$PROJECT_DIR$/rest-client/src/main/java/org/kevin/carpark/web/rest/client/RestClientJerseyImpl.java" />
+        <option value="$PROJECT_DIR$/rest-client/src/test/java/org/kevin/carpark/web/rest/client/test/manual/RestClientJerseyImplTest.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/ListSchedules.jsp" />
+        <option value="$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/ScheduledEntityClientLoaderTest.java" />
+        <option value="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/MainApp.java" />
+        <option value="$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/EntitySingleClientLoaderTest.java" />
+        <option value="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/ModelControllerImpl.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/kevin/carpark/web/WebObjectFactory.java" />
+        <option value="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/RestUpdater.java" />
+        <option value="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/EntityClientLoader.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/ReplyMessage.java" />
+        <option value="$PROJECT_DIR$/dao-jaxb/src/test/java/org/kevin/carpark/dao/jaxbimpl/test/TicketMachineDAOJaxbImplTest.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketMachineList.java" />
+        <option value="$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/ModelControllerDummyImpl.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/AddOrModifyMachine.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/ListMachines.jsp" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketScheduleList.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketMachine.java" />
+        <option value="$PROJECT_DIR$/model/src/test/java/org/kevin/carpark/model/TicketSchedule.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="PackagesPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="dao-jaxb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="dao-jaxb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="dao-jaxb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="dao-jaxb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="dao-jaxb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jaxbimpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="rest-client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="rest-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="rest-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="rest-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="rest-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="kevin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="kevin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="carpark" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="kevin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="carpark" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="model" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="kevin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="kevin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="carpark" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="kevin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="carpark" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="model" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="parking" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="parking-model" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="kevin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="carpark" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="model" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="parking" type="58d84e3e:PackageViewProjectNode" />
+              <item name="parking-dao-jaxb" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="parking" type="58d84e3e:PackageViewProjectNode" />
+              <item name="parking-dao-jaxb" type="616d4139:PackageViewModuleNode" />
+              <item name="org.kevin.carpark.dao.jaxbimpl" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="parking" type="58d84e3e:PackageViewProjectNode" />
+              <item name="parking-dao-jaxb" type="616d4139:PackageViewModuleNode" />
+              <item name="org.kevin.carpark.dao.jaxbimpl" type="1f31426a:PackageElementNode" />
+              <item name="test" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="parking" type="58d84e3e:PackageViewProjectNode" />
+              <item name="parking-model" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="parking" type="58d84e3e:PackageViewProjectNode" />
+              <item name="parking-model" type="616d4139:PackageViewModuleNode" />
+              <item name="org.kevin.carpark.model" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="parking" type="58d84e3e:PackageViewProjectNode" />
+              <item name="parking-model" type="616d4139:PackageViewModuleNode" />
+              <item name="org.kevin.carpark.model" type="1f31426a:PackageElementNode" />
+              <item name="test" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="parking" type="58d84e3e:PackageViewProjectNode" />
+              <item name="parking-rest-client" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="parking" type="58d84e3e:PackageViewProjectNode" />
+              <item name="parking-web" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547581797276" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.osgi.library.bundling" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.kevin.carpark.model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.kevin.carpark.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\web" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ModelJaxbTest">
+    <configuration name="ModelJaxbTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-model" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.kevin.carpark.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.kevin.carpark.model.test" />
+      <option name="MAIN_CLASS_NAME" value="org.kevin.carpark.model.test.ModelJaxbTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModelJaxbTest.testJaxb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-model" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.kevin.carpark.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.kevin.carpark.model.test" />
+      <option name="MAIN_CLASS_NAME" value="org.kevin.carpark.model.test.ModelJaxbTest" />
+      <option name="METHOD_NAME" value="testJaxb" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ModelJaxbTest" />
+        <item itemvalue="JUnit.ModelJaxbTest.testJaxb" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01c8bbcd-a2af-40dc-b30b-ff8461a823f4" name="Default Changelist" comment="" />
+      <created>1547395907560</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547395907560</updated>
+      <workItem from="1547395915886" duration="22529000" />
+      <workItem from="1547573280231" duration="2996000" />
+      <workItem from="1547576448410" duration="5045000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ModelJaxbTest_testJaxb - 2019.01.13 at 21h 34m 06s.xml">
+      <configuration name="ModelJaxbTest.testJaxb" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelJaxbTest - 2019.01.13 at 21h 37m 31s.xml">
+      <configuration name="ModelJaxbTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelJaxbTest - 2019.01.13 at 21h 38m 02s.xml">
+      <configuration name="ModelJaxbTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelJaxbTest_testJaxb - 2019.01.13 at 21h 41m 08s.xml">
+      <configuration name="ModelJaxbTest.testJaxb" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelJaxbTest - 2019.01.13 at 21h 42m 41s.xml">
+      <configuration name="ModelJaxbTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelJaxbTest - 2019.01.13 at 21h 49m 19s.xml">
+      <configuration name="ModelJaxbTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelJaxbTest - 2019.01.13 at 23h 41m 23s.xml">
+      <configuration name="ModelJaxbTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="30570000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info id="Designer" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.23154363" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="bottom" id="Terminal" order="6" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" weight="0.3286119" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Bean Validation" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="762" selection-start-line="762" selection-end-line="762" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/test/java/org/kevin/carpark/model/test/ModelJaxbTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="56" column="60" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#3710#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/org/kevin/carpark/service/ServiceFacadeImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-client/src/test/java/org/kevin/carpark/web/rest/client/test/manual/RestClientJerseyImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="74" selection-start-line="1" selection-start-column="74" selection-end-line="1" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/RestInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/ServiceFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao-jaxb/src/main/java/org/kevin/carpark/dao/jaxbimpl/TicketMachineDAOJaxbImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="205" column="24" selection-start-line="205" selection-start-column="24" selection-end-line="205" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking-uml/Class Diagrams/exampleprojectClassDiagram.cdg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/ScheduledEntityClientLoaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/parking-model.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar!/javax/ws/rs/core/Response.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2758">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/EntitySingleClientLoaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swing-client/src/test/java/org/kevin/carpark/swingcient/test/manual/RestClientJerseyImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parking.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/ModelControllerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-555">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/index.html___jb_tmp___" />
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/index.html___jb_old___" />
+    <entry file="file://$PROJECT_DIR$/dao-jaxb/parking-dao-jaxb.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/test/java/org/kevin/carpark/service/test/ServiceFacadeImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-client/src/main/java/org/kevin/carpark/web/rest/client/RestClientJerseyImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/gui/ControlsJPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/RestUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app-data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1815" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENCE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/ReplyMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/EntityClientLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao-jaxb/src/test/java/org/kevin/carpark/dao/jaxbimpl/test/TicketMachineDAOJaxbImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/resources/org/kevin/carpark/model/jaxb.index">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/ServiceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/org/kevin/carpark/service/ServiceFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="27" column="81" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/kevin/carpark/web/rest/ExampleProjectRestImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="82" column="70" selection-start-line="82" selection-start-column="70" selection-end-line="82" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/kevin/carpark/web/rest/RestApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/kevin/carpark/web/WebObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swing-client/src/main/java/org/kevin/carpark/swingcient/ModelControllerDummyImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="35" column="53" lean-forward="true" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao-jaxb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/ListMachines.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketMachineDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketScheduleList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketMachineList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/AddOrModifyMachine.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/kevin/carpark/model/TicketMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ScheduleList.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/test/java/org/kevin/carpark/model/TicketSchedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding>
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>parking-web:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>parking</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.fasterxml.jackson.core:jackson-annotations:2.3.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

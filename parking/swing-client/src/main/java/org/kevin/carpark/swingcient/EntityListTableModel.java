@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import org.kevin.carpark.model.Entity;
+import org.kevin.carpark.model.TicketMachine;
 
 /**
  *
@@ -17,23 +17,23 @@ import org.kevin.carpark.model.Entity;
  */
 public class EntityListTableModel extends AbstractTableModel {
 
-    private List<Entity> entities = Collections.synchronizedList(new ArrayList<Entity>());
+    private List<TicketMachine> entities = Collections.synchronizedList(new ArrayList<TicketMachine>());
 
-    private Entity e = new Entity();
+    private TicketMachine e = new TicketMachine();
 
     private boolean DEBUG = true;
 
     private String[] columnNames = {"id", "Field_A", "Field_B", "Field_C"};
 
-    public List<Entity> getEntities() {
+    public List<TicketMachine> getEntities() {
         // copies and returns a copied list (unmodifiable to show is not attached)
         synchronized (entities) {
-            return Collections.unmodifiableList(new ArrayList<Entity>(entities));
+            return Collections.unmodifiableList(new ArrayList<TicketMachine>(entities));
         }
 
     }
 
-    public void setEntities(List<Entity> entities) {
+    public void setEntities(List<TicketMachine> entities) {
         synchronized (this.entities) {
             this.entities.clear();
             this.entities.addAll(entities);
@@ -62,7 +62,7 @@ public class EntityListTableModel extends AbstractTableModel {
         if ( row >= entities.size()) {
             return null;
         }
-        Entity entity = entities.get(row);
+        TicketMachine entity = entities.get(row);
         switch (col) {
             case 0:
                 return entity.getId();
@@ -108,7 +108,7 @@ public class EntityListTableModel extends AbstractTableModel {
                     + value.getClass() + ")");
         }
 
-        Entity entity = entities.get(row);
+        TicketMachine entity = entities.get(row);
         switch (col) {
             case 0:
                 try {

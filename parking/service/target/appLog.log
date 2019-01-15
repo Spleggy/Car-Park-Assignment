@@ -1,18 +1,18 @@
-13:45:54.384 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.EntityDAOJaxbImpl - using dataFile:C:\Users\bogto\Desktop\gitrepos\CarParkAssignment\parking\service\.\target\testfile.xml
-13:45:54.396 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.EntityDAOJaxbImpl - dataFile does not exist creating new C:\Users\bogto\Desktop\gitrepos\CarParkAssignment\parking\service\.\target\testfile.xml
-13:45:54.408 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.EntityDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<entityList>
-    <entities/>
-</entityList>
+18:58:35.041 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - using dataFile:C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\service\.\target\testfile.xml
+18:58:35.041 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - dataFile does not exist creating new C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\service\.\target\testfile.xml
+18:58:35.041 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ticketMachineList>
+    <ticketMachine/>
+</ticketMachineList>
 
-13:45:54.422 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.EntityDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<entityList>
-    <lastEntityId>1</lastEntityId>
-    <entities>
-        <entity>
+18:58:35.057 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ticketMachineList>
+    <lastTicketMachineId>1</lastTicketMachineId>
+    <ticketMachine>
+        <ticketMachine>
             <id>1</id>
             <field_A>testFieldA</field_A>
-        </entity>
-    </entities>
-</entityList>
+        </ticketMachine>
+    </ticketMachine>
+</ticketMachineList>
 

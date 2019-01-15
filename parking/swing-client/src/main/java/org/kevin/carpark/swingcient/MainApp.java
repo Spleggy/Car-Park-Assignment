@@ -9,8 +9,8 @@ import java.util.Properties;
 import org.kevin.carpark.swingcient.gui.AppMainJFrame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.kevin.carpark.dao.jaxbimpl.EntityDAOJaxbImpl;
-import org.kevin.carpark.model.EntityDAO;
+import org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl;
+import org.kevin.carpark.model.TicketMachineDAO;
 
 public class MainApp {
 
@@ -106,17 +106,17 @@ public class MainApp {
         LOG.info(configmsg);
 
         //setting up dao
-        EntityDAO entityDAO = new EntityDAOJaxbImpl(dataFileLocation);
+        TicketMachineDAO ticketMachineDAO = new TicketMachineDAOJaxbImpl(dataFileLocation);
 
         // setting up client loader
-        EntityClientLoader entityClientLoader = new EntityClientLoader(entityDAO, baseUrl);
+        EntityClientLoader entityClientLoader = new EntityClientLoader(ticketMachineDAO, baseUrl);
 
         // schedule entity client loader
         if (scheduleEnabled) {
             entityClientLoader.scheduleLoadData(scheduleIntervalSeconds, retryAttempts, retryIntervalSeconds);
         }
 
-        ModelController controller = new ModelControllerImpl(entityDAO, entityClientLoader);
+        ModelController controller = new ModelControllerImpl(ticketMachineDAO, entityClientLoader);
 
         //  AppMainJFrame mainJFrame = new AppMainJFrame(controller);
         //  mainJFrame.pack();

@@ -2,11 +2,11 @@
 
 <ClassDiagram name="ReplyMessage">
   <ClassDiagramComponents>
-    <Class name="Entity" package="org.kevin.carpark.model" visibility="public" xPosition="632.0" yPosition="999.0">
+    <Class name="Meter" package="org.kevin.carpark.model" visibility="public" xPosition="743.0" yPosition="942.0">
       <Fields>
-        <Field name="field_A" type="String" visibility="private"/>
-        <Field name="field_B" type="String" visibility="private"/>
-        <Field name="field_C" type="String" visibility="private"/>
+        <Field name="meterID" type="Integer" visibility="private"/>
+        <Field name="location" type="String" visibility="private"/>
+        <Field name="typeOfStay" type="Boolean" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods/>
@@ -20,50 +20,74 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="EntityList" package="org.kevin.carpark.model" visibility="public" xPosition="22.0" yPosition="436.0">
+    <Class name="EntityList" package="org.kevin.carpark.model" visibility="public" xPosition="4.0" yPosition="436.0">
       <Fields>
-        <Field name="entities" type="List&lt;Entity&gt;" visibility="private"/>
+        <Field name="ticketMachines" type="List&lt;TicketMachine&gt;" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods/>
     </Class>
-    <Interface name="ServiceFacade" package="org.kevin.carpark.model" visibility="public" xPosition="602.0" yPosition="552.0">
+    <Class name="TicketMachine" package="" visibility="public" xPosition="465.0" yPosition="942.0">
+      <Fields>
+        <Field name="scheduleID" type="Integer" visibility="private"/>
+        <Field name="startTime" type="Date" visibility="private"/>
+        <Field name="hourlyPrice" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
       <Methods/>
-    </Interface>
-    <Interface name="EntityDAO" package="org.kevin.carpark.model" visibility="public" xPosition="556.0" yPosition="711.0">
+    </Class>
+    <Interface name="ParkingServiceFacade" package="org.kevin.carpark.model" visibility="public" xPosition="489.0" yPosition="519.0">
       <Methods>
-        <Method name="createEntity" returnType="Entity" visibility="public">
-          <Argument type="Entity" name="entity"/>
+        <Method name="deleteMeter" returnType="void" visibility="public">
+          <Argument type="Integer" name="meterID"/>
         </Method>
-        <Method name="deleteEntity" returnType="Integer" visibility="public">
-          <Argument type="Integer" name="id"/>
+        <Method name="updateMeter" returnType="void" visibility="public">
+          <Argument type="Integer" name="meterID"/>
         </Method>
-        <Method name="retrieveEntity" returnType="Integer" visibility="public">
-          <Argument type="Integer" name="id"/>
+        <Method name="createMeter" returnType="void" visibility="public">
+          <Argument type="Integer" name="meterID"/>
+          <Argument type="String" name="location"/>
+          <Argument type="Boolean" name="typeOfStay"/>
         </Method>
-        <Method name="retrieveAllEntities" returnType="List&lt;Entity&gt;" visibility="public"/>
-        <Method name="retrieveMatchingEntities" returnType="Entity" visibility="public">
-          <Argument type="Entity" name="entityTempate"/>
+        <Method name="setMeterSchedule" returnType="void" visibility="public">
+          <Argument type="Integer" name="meterID"/>
+          <Argument type="Integer" name="scheduleID"/>
         </Method>
-        <Method name="updateEntity" returnType="Entity" visibility="public">
-          <Argument type="Entity" name="entity"/>
+      </Methods>
+    </Interface>
+    <Interface name="MeterDAO" package="org.kevin.carpark.model" visibility="public" xPosition="496.0" yPosition="721.0">
+      <Methods>
+        <Method name="deleteMeter" returnType="void" visibility="public">
+          <Argument type="Integer" name="meterID"/>
         </Method>
-        <Method name="deleteAllEntities" returnType="void" visibility="public"/>
+        <Method name="updateMeter" returnType="Meter" visibility="public">
+          <Argument type="Integer" name="meterID"/>
+        </Method>
+        <Method name="createMeter" returnType="void" visibility="public">
+          <Argument type="Integer" name="meterID"/>
+          <Argument type="String" name="location"/>
+          <Argument type="Boolean" name="typeOfStay"/>
+        </Method>
+        <Method name="setMeterSchedule" returnType="void" visibility="public">
+          <Argument type="Integer" name="meterID"/>
+          <Argument type="Integer" name="scheduleID"/>
+        </Method>
       </Methods>
     </Interface>
     <Interface name="RestInterface" package="org.kevin.carpark.model" visibility="public" xPosition="246.0" yPosition="19.0">
       <Methods>
-        <Method name="retrieveMatchingEntites" returnType="ReplyMessage" visibility="public">
+        <Method name="retrieveMatchingEntites" returnType="Entity" visibility="public">
           <Argument type="Entity" name="entityTempate"/>
         </Method>
-        <Method name="retrieveEntity" returnType="ReplyMessage" visibility="public">
+        <Method name="retrieveEntity" returnType="Integer" visibility="public">
           <Argument type="Integer" name="id"/>
         </Method>
       </Methods>
     </Interface>
-    <Interface name="ServiceFactory" package="org.kevin.carpark.model" visibility="public" xPosition="579.0" yPosition="173.0">
+    <Interface name="MeterFactory" package="org.kevin.carpark.model" visibility="public" xPosition="522.0" yPosition="197.0">
       <Methods>
-        <Method name="getServiceFacade" returnType="ServiceFacade" visibility="public"/>
+        <Method name="getParkingServiceFacade" returnType="ParkingServiceFacade" visibility="public"/>
+        <Method name="createParkingServiceFacade" returnType="void" visibility="public"/>
       </Methods>
     </Interface>
     <Interface name="WebUiJsp_do_not_generate" package="org.kevin.carpark.model" visibility="public" xPosition="881.0" yPosition="19.0">
@@ -71,15 +95,16 @@
     </Interface>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation name="usesServiceFacade" source="org.kevin.carpark.model.WebUiJsp_do_not_generate" target="org.kevin.carpark.model.ServiceFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="usesObjectFactoryToGetService" source="org.kevin.carpark.model.RestInterface" target="org.kevin.carpark.model.ServiceFactory" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="useReplyMessage" source="org.kevin.carpark.model.RestInterface" target="org.kevin.carpark.model.ReplyMessage" sourceCardinality="1..1" targetCardinality="0..*"/>
-    <IsRelation name="is" source="org.kevin.carpark.model.ServiceFacade" target="org.kevin.carpark.model.EntityDAO"/>
-    <UseRelation name="usesServiceFacade" source="org.kevin.carpark.model.RestInterface" target="org.kevin.carpark.model.ServiceFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="usesObjectFactoryToGetService" source="org.kevin.carpark.model.WebUiJsp_do_not_generate" target="org.kevin.carpark.model.ServiceFactory" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="createsAndAccesses" source="org.kevin.carpark.model.ServiceFactory" target="org.kevin.carpark.model.ServiceFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="hasEntityList" source="org.kevin.carpark.model.ReplyMessage" target="org.kevin.carpark.model.EntityList" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <UseRelation name="usesEntities" source="org.kevin.carpark.model.EntityDAO" target="org.kevin.carpark.model.Entity" sourceCardinality="1..1" targetCardinality="0..*"/>
-    <UseRelation name="usesEntityDao" source="org.kevin.carpark.model.ServiceFacade" target="org.kevin.carpark.model.EntityDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="usesObjectFactoryToGetService" source="org.kevin.carpark.model.RestInterface" target="org.kevin.carpark.model.MeterFactory" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="usesServiceFacade" source="org.kevin.carpark.model.WebUiJsp_do_not_generate" target="org.kevin.carpark.model.ParkingServiceFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="org.kevin.carpark.model.ParkingServiceFacade" target="org.kevin.carpark.model.MeterDAO"/>
+    <UseRelation name="usesMeterDao" source="org.kevin.carpark.model.ParkingServiceFacade" target="org.kevin.carpark.model.MeterDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="usesObjectFactoryToGetService" source="org.kevin.carpark.model.WebUiJsp_do_not_generate" target="org.kevin.carpark.model.MeterFactory" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="createsAndAccesses" source="org.kevin.carpark.model.MeterFactory" target="org.kevin.carpark.model.ParkingServiceFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="useReplyMessage" source="org.kevin.carpark.model.RestInterface" target="org.kevin.carpark.model.ReplyMessage" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <UseRelation name="usesMeter" source="org.kevin.carpark.model.MeterDAO" target="org.kevin.carpark.model.Meter" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <UseRelation name="usesTicketMachine" source="org.kevin.carpark.model.MeterDAO" target="TicketMachine" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="usesServiceFacade" source="org.kevin.carpark.model.RestInterface" target="org.kevin.carpark.model.ParkingServiceFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

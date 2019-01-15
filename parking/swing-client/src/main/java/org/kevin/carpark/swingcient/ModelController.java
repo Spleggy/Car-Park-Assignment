@@ -5,7 +5,7 @@
  */
 package org.kevin.carpark.swingcient;
 
-import org.kevin.carpark.model.Entity;
+import org.kevin.carpark.model.TicketMachine;
 
 /**
  *
@@ -15,7 +15,7 @@ public interface ModelController {
 
     void clearSearch();
 
-    void findMatchingSearch(Entity templateEntity);
+    void findMatchingSearch(TicketMachine templateEntity);
 
     EntityListTableModel getEntityListTableModel();
     

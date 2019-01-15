@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="parking-dao-jaxb" />
+        <module name="parking-model" />
+        <module name="parking-rest-client" />
+        <module name="parking-service" />
+        <module name="parking-swing-client" />
+        <module name="parking-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="parking" target="1.8" />
+      <module name="parking-dao-jaxb" target="1.8" />
+      <module name="parking-model" target="1.8" />
+      <module name="parking-rest-client" target="1.8" />
+      <module name="parking-service" target="1.8" />
+      <module name="parking-swing-client" target="1.8" />
+      <module name="parking-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

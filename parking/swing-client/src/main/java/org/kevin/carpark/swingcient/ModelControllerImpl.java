@@ -8,8 +8,8 @@ package org.kevin.carpark.swingcient;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.kevin.carpark.model.Entity;
-import org.kevin.carpark.model.EntityDAO;
+import org.kevin.carpark.model.TicketMachine;
+import org.kevin.carpark.model.TicketMachineDAO;
 
 /**
  *
@@ -19,39 +19,39 @@ public class ModelControllerImpl implements ModelController {
 
     private static final Logger LOG = LoggerFactory.getLogger(ModelControllerImpl.class);
 
-    private EntityDAO entityDAO = null;
+    private TicketMachineDAO ticketMachineDAO = null;
 
-    private EntityListTableModel entityListTableModel = new EntityListTableModel();
+    private EntityListTableModel ticketMachineListTableModel = new EntityListTableModel();
 
     private EntityClientLoader entityClientLoader = null;
 
-    public ModelControllerImpl(EntityDAO entityDAO, EntityClientLoader entityClientLoader) {
+    public ModelControllerImpl(TicketMachineDAO ticketMachineDAO, EntityClientLoader entityClientLoader) {
         this.entityClientLoader = entityClientLoader;
-        this.entityDAO = entityDAO;
-        List<Entity> entities = entityDAO.retrieveAllEntities();
-        entityListTableModel.setEntities(entities);
+        this.ticketMachineDAO = ticketMachineDAO;
+        List<TicketMachine> entities = ticketMachineDAO.retrieveAllTicketMachines();
+        ticketMachineListTableModel.setEntities(entities);
     }
 
     @Override
     public EntityListTableModel getEntityListTableModel() {
-        return entityListTableModel;
+        return ticketMachineListTableModel;
     }
 
     @Override
     public void clearSearch() {
         LOG.debug("clear search selected");
 
-        List<Entity> entities = entityDAO.retrieveAllEntities();
-        entityListTableModel.setEntities(entities);
+        List<TicketMachine> ticketMachines = ticketMachineDAO.retrieveAllTicketMachines();
+        ticketMachineListTableModel.setEntities(ticketMachines);
     }
 
     @Override
-    public void findMatchingSearch(Entity templateEntity) {
-        LOG.debug("find matching with templateEntity=" + templateEntity);
+    public void findMatchingSearch(TicketMachine ticketMachineTemplate) {
+        LOG.debug("find matching with templateEntity=" + ticketMachineTemplate);
 
-        List<Entity> entities = entityDAO.retrieveMatchingEntities(templateEntity);
-        LOG.debug("found " + entities.size() + " matching with templateEntity=" + templateEntity);
-        entityListTableModel.setEntities(entities);
+        List<TicketMachine> ticketMachines = ticketMachineDAO.retrieveMatchingTicketMachines(ticketMachineTemplate);
+        LOG.debug("found " + ticketMachines.size() + " matching with templateEntity=" + ticketMachineTemplate);
+        ticketMachineListTableModel.setEntities(ticketMachines);
 
     }
 

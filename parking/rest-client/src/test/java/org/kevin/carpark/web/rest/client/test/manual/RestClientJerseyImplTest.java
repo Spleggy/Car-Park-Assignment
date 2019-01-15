@@ -9,7 +9,7 @@ import java.util.List;
 import javax.ws.rs.core.MediaType;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.kevin.carpark.model.Entity;
+import org.kevin.carpark.model.TicketMachine;
 import org.kevin.carpark.model.ReplyMessage;
 import org.kevin.carpark.web.rest.client.RestClientJerseyImpl;
 
@@ -29,16 +29,16 @@ public class RestClientJerseyImplTest {
         RestClientJerseyImpl restClient = new RestClientJerseyImpl(baseUrl, mediaType);
 
         // try to retreive an unknown entity
-        ReplyMessage replyMessage = restClient.retrieveEntity(Integer.SIZE);
+        ReplyMessage replyMessage = restClient.retrieveTicketMachine(Integer.SIZE);
         assertNotNull(replyMessage);
-        assertTrue(replyMessage.getEntityList().getEntities().isEmpty());
+        assertTrue(replyMessage.getTicketMachineList().getTicketMachines().isEmpty());
 
         // try to retreive entity with id 1
-        ReplyMessage replyMessage2 = restClient.retrieveEntity(1);
+        ReplyMessage replyMessage2 = restClient.retrieveTicketMachine(1);
         assertNotNull(replyMessage2);
-        assertEquals(1, replyMessage2.getEntityList().getEntities().size());
+        assertEquals(1, replyMessage2.getTicketMachineList().getTicketMachines().size());
 
-        Entity entity = replyMessage2.getEntityList().getEntities().get(0);
+        TicketMachine entity = replyMessage2.getTicketMachineList().getTicketMachines().get(0);
         System.out.println("Received Entity: " + entity);
 
     }
@@ -48,19 +48,19 @@ public class RestClientJerseyImplTest {
 
         RestClientJerseyImpl restClient = new RestClientJerseyImpl(baseUrl, mediaType);
 
-        Entity entityTempate = new Entity();
-        entityTempate.setField_A("abcd");
+        TicketMachine ticketMachineTemplate = new TicketMachine();
+        ticketMachineTemplate.setField_A("abcd");
 
         // try to retreive an unknown entity
-        ReplyMessage replyMessage = restClient.retrieveMatchingEntites(entityTempate);
+        ReplyMessage replyMessage = restClient.retrieveMatchingTicketMachine(ticketMachineTemplate);
         assertNotNull(replyMessage);
 
-        List<Entity> entityList =  replyMessage.getEntityList().getEntities();
+        List<TicketMachine> ticketMachineList =  replyMessage.getTicketMachineList().getTicketMachines();
         System.out.println("Received "
-                + entityList.size()
+                + ticketMachineList.size()
                 + " Entities");
         
-       for(Entity e: entityList){
+       for(TicketMachine e: ticketMachineList){
            System.out.println("   "+ e);
        }
         

@@ -5,7 +5,7 @@
  */
 package org.kevin.carpark.web.rest.client;
 
-import org.kevin.carpark.model.Entity;
+import org.kevin.carpark.model.TicketMachine;
 import org.kevin.carpark.model.ReplyMessage;
 import org.kevin.carpark.model.RestInterface;
 
@@ -39,14 +39,14 @@ public class RestClientJerseyImpl implements RestInterface {
     }
 
     @Override
-    public ReplyMessage retrieveMatchingEntites(Entity entityTempate) {
+    public ReplyMessage retrieveMatchingTicketMachine(TicketMachine ticketMachineTemplate) {
 
         Response response = null;
         ReplyMessage replyMessage = null;
         try {
 
             Invocation.Builder builder = target.path("/retrievematching").request(mediaType);
-            response = builder.post(javax.ws.rs.client.Entity.entity(entityTempate, mediaType));
+            response = builder.post(javax.ws.rs.client.Entity.entity(ticketMachineTemplate, mediaType));
 
             // read reply message
             replyMessage = response.readEntity(ReplyMessage.class);
@@ -69,7 +69,7 @@ public class RestClientJerseyImpl implements RestInterface {
     }
 
     @Override
-    public ReplyMessage retrieveEntity(Integer id) {
+    public ReplyMessage retrieveTicketMachine(Integer id) {
         Response response = null;
         ReplyMessage replyMessage = null;
         try {

@@ -11,9 +11,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.kevin.carpark.dao.jaxbimpl.EntityDAOJaxbImpl;
-import org.kevin.carpark.model.Entity;
-import org.kevin.carpark.model.EntityDAO;
+import org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl;
+import org.kevin.carpark.model.TicketMachine;
+import org.kevin.carpark.model.TicketMachineDAO;
 import org.kevin.carpark.swingcient.EntityClientLoader;
 
 /**
@@ -37,10 +37,10 @@ public class ScheduledEntityClientLoaderTest {
         assertFalse(file.exists());
 
         // create dao
-        EntityDAO entityDAO = new EntityDAOJaxbImpl(TEST_DATA_FILE_LOCATION);
+        TicketMachineDAO ticketMachineDAO = new TicketMachineDAOJaxbImpl(TEST_DATA_FILE_LOCATION);
         assertTrue(file.exists());
 
-        EntityClientLoader entityClientLoader = new EntityClientLoader(entityDAO, TEST_BASE_URL);
+        EntityClientLoader entityClientLoader = new EntityClientLoader(ticketMachineDAO, TEST_BASE_URL);
 
         // schedule loading every minute (2 retrys interval 10 seconds every minute)
         int scheduleIntervalSeconds = 1 * 60; // 1 minutes
@@ -64,7 +64,7 @@ public class ScheduledEntityClientLoaderTest {
         LOG.debug("Total Client Retrieve Tries = " + entityClientLoader.getTotalClientRetrieveTries());
         LOG.debug("Total Client Retrieve Successful = " + entityClientLoader.getTotalClientRetrieveSuccessful());
 
-        List<Entity> list = entityDAO.retrieveAllEntities();
+        List<TicketMachine> list = ticketMachineDAO.retrieveAllTicketMachines();
         LOG.debug("Schedule retrieved entites = " + list.size());
 
     }

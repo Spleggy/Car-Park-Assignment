@@ -9,7 +9,7 @@ import java.util.List;
 import javax.ws.rs.core.MediaType;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.kevin.carpark.model.Entity;
+import org.kevin.carpark.model.TicketMachine;
 import org.kevin.carpark.model.ReplyMessage;
 import org.kevin.carpark.web.rest.client.RestClientJerseyImpl;
 
@@ -38,7 +38,7 @@ public class RestClientJerseyImplTest {
         assertNotNull(replyMessage2);
         assertEquals(1, replyMessage2.getEntityList().getEntities().size());
 
-        Entity entity = replyMessage2.getEntityList().getEntities().get(0);
+        TicketMachine entity = replyMessage2.getEntityList().getEntities().get(0);
         System.out.println("Received Entity: " + entity);
 
     }
@@ -48,19 +48,19 @@ public class RestClientJerseyImplTest {
 
         RestClientJerseyImpl restClient = new RestClientJerseyImpl(baseUrl, mediaType);
 
-        Entity entityTempate = new Entity();
+        TicketMachine entityTempate = new TicketMachine();
         entityTempate.setField_A("abcd");
 
         // try to retreive an unknown entity
         ReplyMessage replyMessage = restClient.retrieveMatchingEntites(entityTempate);
         assertNotNull(replyMessage);
 
-        List<Entity> entityList =  replyMessage.getEntityList().getEntities();
+        List<TicketMachine> ticketMachineList =  replyMessage.getEntityList().getEntities();
         System.out.println("Received "
-                + entityList.size()
+                + ticketMachineList.size()
                 + " Entities");
         
-       for(Entity e: entityList){
+       for(TicketMachine e: ticketMachineList){
            System.out.println("   "+ e);
        }
         

@@ -5,8 +5,8 @@
  */
 package org.kevin.carpark.service;
 
-import org.kevin.carpark.dao.jaxbimpl.EntityDAOJaxbImpl;
-import org.kevin.carpark.model.EntityDAO;
+import org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl;
+import org.kevin.carpark.model.TicketMachineDAO;
 import org.kevin.carpark.model.ServiceFacade;
 import org.kevin.carpark.model.ServiceFactory;
 
@@ -24,10 +24,10 @@ public class ServiceFactoryImpl implements ServiceFactory {
         if (dataFileUri == null) {
             throw new IllegalArgumentException("dataFileUri must not be null");
         }
-        
-        EntityDAO entityDao = new EntityDAOJaxbImpl(dataFileUri);
+
+        TicketMachineDAO ticketMachineDAO = new TicketMachineDAOJaxbImpl(dataFileUri);
         ServiceFacadeImpl serviceFacadeImpl = new ServiceFacadeImpl();
-        serviceFacadeImpl.setEntityDAO(entityDao);
+        serviceFacadeImpl.setTicketMachineDAO(ticketMachineDAO);
         serviceFacade = serviceFacadeImpl;
         
     }

@@ -6,8 +6,8 @@
 package org.kevin.carpark.service;
 
 import java.util.List;
-import org.kevin.carpark.model.Entity;
-import org.kevin.carpark.model.EntityDAO;
+import org.kevin.carpark.model.TicketMachine;
+import org.kevin.carpark.model.TicketMachineDAO;
 import org.kevin.carpark.model.ServiceFacade;
 
 /**
@@ -15,46 +15,46 @@ import org.kevin.carpark.model.ServiceFacade;
  * @author cgallen
  */
 public class ServiceFacadeImpl implements ServiceFacade {
-    
-    EntityDAO entityDAO = null;
 
-    public void setEntityDAO(EntityDAO entityDAO) {
-        this.entityDAO = entityDAO;
+    TicketMachineDAO ticketMachineDAO = null;
+
+    public void setTicketMachineDAO(TicketMachineDAO ticketMachineDAO) {
+        this.ticketMachineDAO = ticketMachineDAO;
     }
 
     @Override
-    public void deleteAllEntities() {
-       entityDAO.deleteAllEntities();
+    public void deleteAllTicketMachines() {
+        ticketMachineDAO.deleteAllTicketMachines();
     }
 
     @Override
-    public Entity createEntity(Entity entity) {
-        return entityDAO.createEntity(entity);
+    public TicketMachine createTicketMachine(TicketMachine ticketMachine) {
+        return ticketMachineDAO.createTicketMachine(ticketMachine);
     }
 
     @Override
-    public boolean deleteEntity(Integer id) {
-        return entityDAO.deleteEntity(id);
+    public boolean deleteTicketMachine(Integer id) {
+        return ticketMachineDAO.deleteTicketMachine(id);
     }
 
     @Override
-    public Entity retrieveEntity(Integer id) {
-        return entityDAO.retrieveEntity(id);
+    public TicketMachine retrieveTicketMachine(Integer id) {
+        return ticketMachineDAO.retrieveTicketMachine(id);
     }
 
     @Override
-    public List<Entity> retrieveAllEntities() {
-        return entityDAO.retrieveAllEntities();
+    public List<TicketMachine> retrieveAllTicketMachines() {
+        return ticketMachineDAO.retrieveAllTicketMachines();
     }
 
     @Override
-    public List<Entity> retrieveMatchingEntities(Entity entityTempate) {
-        return entityDAO.retrieveMatchingEntities(entityTempate);
+    public List<TicketMachine> retrieveMatchingTicketMachines(TicketMachine ticketMachineTemplate) {
+        return ticketMachineDAO.retrieveMatchingTicketMachines(ticketMachineTemplate);
     }
 
     @Override
-    public Entity updateEntity(Entity entity) {
-        return entityDAO.updateEntity(entity);
+    public TicketMachine updateTicketMachine(TicketMachine ticketMachine) {
+        return ticketMachineDAO.updateTicketMachine(ticketMachine);
     }
     
 }

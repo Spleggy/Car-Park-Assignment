@@ -16,7 +16,7 @@ public class ReplyMessage {
 
     private String debugMessage;
     
-    private EntityList entityList=new EntityList();
+    private TicketMachineList ticketMachineList=new TicketMachineList();
 
 
     public Integer getCode() {
@@ -35,17 +35,17 @@ public class ReplyMessage {
         this.debugMessage = debugMessage;
     }
 
-    public EntityList getEntityList() {
-        return entityList;
+    public TicketMachineList getTicketMachineList() {
+        return ticketMachineList;
     }
 
-    public void setEntityList(EntityList entityList) {
-        this.entityList = entityList;
+    public void setTicketMachineList(TicketMachineList ticketMachineList) {
+        this.ticketMachineList = ticketMachineList;
     }
 
     @Override
     public String toString() {
-        return "ReplyMessage{" + "code=" + code + ", debugMessage=" + debugMessage + ", entityList=" + entityList + '}';
+        return "ReplyMessage{" + "code=" + code + ", debugMessage=" + debugMessage + ", ticketMachineList=" + ticketMachineList + '}';
     }
 
 

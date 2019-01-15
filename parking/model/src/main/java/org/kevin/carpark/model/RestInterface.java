@@ -2,8 +2,8 @@ package org.kevin.carpark.model;
 
 public interface RestInterface {
 
-    public ReplyMessage retrieveMatchingEntites(Entity entityTempate);
+    public ReplyMessage retrieveMatchingTicketMachine(TicketMachine ticketMachineTemplate);
     
-    public ReplyMessage retrieveEntity(Integer id);
+    public ReplyMessage retrieveTicketMachine(Integer id);
     
 }

@@ -10,7 +10,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.kevin.carpark.model.Entity;
+import org.kevin.carpark.model.TicketMachine;
 import org.kevin.carpark.swingcient.EntityListTableModel;
 import org.kevin.carpark.swingcient.ModelController;
 
@@ -27,7 +27,7 @@ public class ControlsJPanel extends javax.swing.JPanel {
      */
     private ModelController m_modelController = null;
 
-    private EntityListTableModel entityListTableModel = null;
+    private EntityListTableModel ticketMachineListTableModel = null;
 
     /**
      * constructor which gives model controller to component
@@ -36,10 +36,10 @@ public class ControlsJPanel extends javax.swing.JPanel {
      */
     public ControlsJPanel(ModelController modelController) {
         this.m_modelController = modelController;
-        entityListTableModel = modelController.getEntityListTableModel();
+        ticketMachineListTableModel = modelController.getEntityListTableModel();
         initComponents();
 
-        jTable1.setModel(entityListTableModel);
+        jTable1.setModel(ticketMachineListTableModel);
 
         // list selected action added to table
         jTable1.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
@@ -58,7 +58,7 @@ public class ControlsJPanel extends javax.swing.JPanel {
                 String field_A = jTable1.getValueAt(jTable1.getSelectedRow(), 1).toString();
                 String field_B = jTable1.getValueAt(jTable1.getSelectedRow(), 2).toString();
                 String field_C = jTable1.getValueAt(jTable1.getSelectedRow(), 3).toString();
-                Entity entity = new Entity();
+                TicketMachine entity = new TicketMachine();
                 entity.setField_A(field_A);
                 entity.setField_B(field_B);
                 entity.setField_C(field_C);
@@ -163,7 +163,7 @@ public class ControlsJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         LOG.debug("clearSearchButton selected ");
-        Entity templateEntity = new Entity();
+        TicketMachine templateEntity = new TicketMachine();
         entityFieldsJPanel1.setModelEntity(templateEntity);
         jTable1.clearSelection();
         // running query in seperate thread 
@@ -188,7 +188,7 @@ public class ControlsJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         // see https://docs.oracle.com/javase/6/docs/api/javax/swing/SwingWorker.html
         LOG.debug("findMatchingButton selected ");
-        Entity templateEntity = entityFieldsJPanel1.getModelEntity();
+        TicketMachine templateEntity = entityFieldsJPanel1.getModelEntity();
         jTable1.clearSelection();
         // running query in seperate thread 
         SwingWorker worker = new SwingWorker<String, Void>() {
@@ -211,7 +211,7 @@ public class ControlsJPanel extends javax.swing.JPanel {
     private void reloadDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reloadDataButtonActionPerformed
         LOG.debug("reload data button selected ");
         // empty entity so load all data
-        Entity templateEntity = new Entity();
+        TicketMachine templateEntity = new TicketMachine();
         jTable1.clearSelection();
         // running query in seperate thread 
         SwingWorker worker = new SwingWorker<String, Void>() {

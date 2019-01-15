@@ -11,9 +11,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.kevin.carpark.dao.jaxbimpl.EntityDAOJaxbImpl;
-import org.kevin.carpark.model.Entity;
-import org.kevin.carpark.model.EntityDAO;
+import org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl;
+import org.kevin.carpark.model.TicketMachine;
+import org.kevin.carpark.model.TicketMachineDAO;
 import org.kevin.carpark.swingcient.EntityClientLoader;
 
 /**
@@ -37,21 +37,21 @@ public class EntitySingleClientLoaderTest {
         assertFalse(file.exists());
 
         // create dao
-        EntityDAO entityDAO = new EntityDAOJaxbImpl(TEST_DATA_FILE_LOCATION);
+        TicketMachineDAO ticketMachineDAO = new TicketMachineDAOJaxbImpl(TEST_DATA_FILE_LOCATION);
         assertTrue(file.exists());
 
-        List<Entity> list = entityDAO.retrieveAllEntities();
+        List<TicketMachine> list = ticketMachineDAO.retrieveAllTicketMachines();
         assertTrue(list.isEmpty());
 
         String baseUrl = "http://localhost:8680/";
 
-        EntityClientLoader entityClientLoader = new EntityClientLoader(entityDAO, baseUrl);
+        EntityClientLoader entityClientLoader = new EntityClientLoader(ticketMachineDAO, baseUrl);
 
         // try to load from service
         boolean success = entityClientLoader.restClientRetrieveAll();
         assertTrue(success);
 
-        list = entityDAO.retrieveAllEntities();
+        list = ticketMachineDAO.retrieveAllTicketMachines();
         LOG.debug("retrieved enties = " + list.size());
 
     }

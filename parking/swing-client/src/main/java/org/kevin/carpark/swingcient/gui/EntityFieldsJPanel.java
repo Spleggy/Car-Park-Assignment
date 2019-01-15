@@ -10,7 +10,7 @@ import javax.swing.JComponent;
 import javax.swing.JTextField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.kevin.carpark.model.Entity;
+import org.kevin.carpark.model.TicketMachine;
 
 /**
  *
@@ -20,9 +20,9 @@ public class EntityFieldsJPanel extends javax.swing.JPanel {
 
     private static final Logger LOG = LoggerFactory.getLogger(EntityFieldsJPanel.class);
 
-    private Entity modelEntity = new Entity();
+    private TicketMachine modelEntity = new TicketMachine();
 
-    public Entity getModelEntity() {
+    public TicketMachine getModelEntity() {
 
         if ("".equals(jTextField_A.getText())) {
             this.modelEntity.setField_A(null);
@@ -52,7 +52,7 @@ public class EntityFieldsJPanel extends javax.swing.JPanel {
         return modelEntity;
     }
 
-    public void setModelEntity(Entity modelEntity) {
+    public void setModelEntity(TicketMachine modelEntity) {
         LOG.debug("setting model entity to " + modelEntity);
         this.modelEntity = modelEntity;
         jTextField_A.setText(this.modelEntity.getField_A());
