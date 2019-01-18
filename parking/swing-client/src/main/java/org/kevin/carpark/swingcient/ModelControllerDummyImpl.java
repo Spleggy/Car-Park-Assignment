@@ -31,8 +31,8 @@ public class ModelControllerDummyImpl implements ModelController {
         for (int intityId = 0; intityId < ENTITY_NUMBER; intityId++) {
             TicketMachine entity = new TicketMachine();
             entity.setId(intityId);
-            entity.setField_A("field_A_" + intityId);
-            entity.setField_B("field_B_" + intityId);
+            entity.setLocation("field_A_" + intityId);
+            entity.setSchedule("field_B_" + intityId);
             entity.setField_C("field_C_" + intityId);
             elist.add(entity);
         }

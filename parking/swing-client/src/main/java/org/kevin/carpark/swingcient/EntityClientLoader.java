@@ -61,7 +61,7 @@ public class EntityClientLoader {
 
         TicketMachine ticketMachineTemplate = new TicketMachine();
         // you could add a filter value here but leaving values null retrieves all values
-        // e.g entityTempate.setField_A("xxxx");
+        // e.g entityTempate.setLocation("xxxx");
 
         // try to retreive a list of entities
         try {

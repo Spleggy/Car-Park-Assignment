@@ -1,12 +1,24 @@
 package org.kevin.carpark.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class TicketSchedule
 {
+
     private Integer scheduleId;
 
     private String startTime = null;
 
     private Double pricePerHour = null;
+
+
+    public TicketSchedule() {
+
+    }
 
     public Integer getScheduleId() {
         return scheduleId;

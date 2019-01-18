@@ -1,157 +1,182 @@
-18:58:33.340 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - using dataFile:C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\dao-jaxb\target\testDaofile.xml
-18:58:33.340 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - dataFile does not exist creating new C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\dao-jaxb\target\testDaofile.xml
-18:58:33.356 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+13:39:17.258 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - using dataFile:C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\dao-jaxb\target\testDaofile.xml
+13:39:17.268 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - dataFile does not exist creating new C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\dao-jaxb\target\testDaofile.xml
+13:39:17.276 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ticketMachineList>
     <ticketMachine/>
 </ticketMachineList>
 
-18:58:33.356 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - adding entity:Entity{id=null, field_A=field_A_0, field_B=field_B_0, field_C=field_C_0}
-18:58:33.372 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+13:39:17.277 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - adding entity:Entity{id=0, location=Location0, schedule=TicketScheduleList{ticketSchedule=[org.kevin.carpark.model.TicketSchedule@65d6b83b]}}
+13:39:17.292 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ticketMachineList>
     <lastTicketMachineId>1</lastTicketMachineId>
     <ticketMachine>
         <ticketMachine>
             <id>1</id>
-            <field_A>field_A_0</field_A>
-            <field_B>field_B_0</field_B>
-            <field_C>field_C_0</field_C>
+            <location>Location0</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>0</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
     </ticketMachine>
 </ticketMachineList>
 
-18:58:33.372 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - adding entity:Entity{id=null, field_A=field_A_1, field_B=field_B_1, field_C=field_C_1}
-18:58:33.372 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+13:39:17.292 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - adding entity:Entity{id=1, location=Location1, schedule=TicketScheduleList{ticketSchedule=[org.kevin.carpark.model.TicketSchedule@29176cc1]}}
+13:39:17.298 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ticketMachineList>
     <lastTicketMachineId>2</lastTicketMachineId>
     <ticketMachine>
         <ticketMachine>
             <id>1</id>
-            <field_A>field_A_0</field_A>
-            <field_B>field_B_0</field_B>
-            <field_C>field_C_0</field_C>
+            <location>Location0</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>0</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
         <ticketMachine>
             <id>2</id>
-            <field_A>field_A_1</field_A>
-            <field_B>field_B_1</field_B>
-            <field_C>field_C_1</field_C>
+            <location>Location1</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>1</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
     </ticketMachine>
 </ticketMachineList>
 
-18:58:33.372 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - adding entity:Entity{id=null, field_A=field_A_2, field_B=field_B_2, field_C=field_C_2}
-18:58:33.387 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+13:39:17.300 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - adding entity:Entity{id=2, location=Location2, schedule=TicketScheduleList{ticketSchedule=[org.kevin.carpark.model.TicketSchedule@15b204a1]}}
+13:39:17.305 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ticketMachineList>
     <lastTicketMachineId>3</lastTicketMachineId>
     <ticketMachine>
         <ticketMachine>
             <id>1</id>
-            <field_A>field_A_0</field_A>
-            <field_B>field_B_0</field_B>
-            <field_C>field_C_0</field_C>
+            <location>Location0</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>0</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
         <ticketMachine>
             <id>2</id>
-            <field_A>field_A_1</field_A>
-            <field_B>field_B_1</field_B>
-            <field_C>field_C_1</field_C>
+            <location>Location1</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>1</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
         <ticketMachine>
             <id>3</id>
-            <field_A>field_A_2</field_A>
-            <field_B>field_B_2</field_B>
-            <field_C>field_C_2</field_C>
+            <location>Location2</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>2</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
     </ticketMachine>
 </ticketMachineList>
 
-18:58:33.387 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - adding entity:Entity{id=null, field_A=field_A_3, field_B=field_B_3, field_C=field_C_3}
-18:58:33.387 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+13:39:17.328 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - deleting  entity:2
+13:39:17.333 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ticketMachineList>
-    <lastTicketMachineId>4</lastTicketMachineId>
+    <lastTicketMachineId>3</lastTicketMachineId>
     <ticketMachine>
         <ticketMachine>
             <id>1</id>
-            <field_A>field_A_0</field_A>
-            <field_B>field_B_0</field_B>
-            <field_C>field_C_0</field_C>
-        </ticketMachine>
-        <ticketMachine>
-            <id>2</id>
-            <field_A>field_A_1</field_A>
-            <field_B>field_B_1</field_B>
-            <field_C>field_C_1</field_C>
+            <location>Location0</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>0</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
         <ticketMachine>
             <id>3</id>
-            <field_A>field_A_2</field_A>
-            <field_B>field_B_2</field_B>
-            <field_C>field_C_2</field_C>
-        </ticketMachine>
-        <ticketMachine>
-            <id>4</id>
-            <field_A>field_A_3</field_A>
-            <field_B>field_B_3</field_B>
-            <field_C>field_C_3</field_C>
+            <location>Location2</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>2</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
     </ticketMachine>
 </ticketMachineList>
 
-18:58:33.419 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - deleting  entity:2
-18:58:33.419 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+13:39:17.339 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - updating entity: Entity{id=3, location=Location2, schedule=TicketScheduleList{ticketSchedule=[org.kevin.carpark.model.TicketSchedule@229d10bd]}}
+13:39:17.339 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - update template: Entity{id=3, location=field_A_Update, schedule=TicketScheduleList{ticketSchedule=[org.kevin.carpark.model.TicketSchedule@229d10bd]}}
+13:39:17.343 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ticketMachineList>
-    <lastTicketMachineId>4</lastTicketMachineId>
+    <lastTicketMachineId>3</lastTicketMachineId>
     <ticketMachine>
         <ticketMachine>
             <id>1</id>
-            <field_A>field_A_0</field_A>
-            <field_B>field_B_0</field_B>
-            <field_C>field_C_0</field_C>
+            <location>Location0</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>0</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
         <ticketMachine>
             <id>3</id>
-            <field_A>field_A_2</field_A>
-            <field_B>field_B_2</field_B>
-            <field_C>field_C_2</field_C>
-        </ticketMachine>
-        <ticketMachine>
-            <id>4</id>
-            <field_A>field_A_3</field_A>
-            <field_B>field_B_3</field_B>
-            <field_C>field_C_3</field_C>
+            <location>field_A_Update</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>2</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
     </ticketMachine>
 </ticketMachineList>
 
-18:58:33.419 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - updating entity: Entity{id=3, field_A=field_A_2, field_B=field_B_2, field_C=field_C_2}
-18:58:33.419 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - update template: Entity{id=3, field_A=field_A_Update, field_B=field_B_Update, field_C=null}
-18:58:33.419 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ticketMachineList>
-    <lastTicketMachineId>4</lastTicketMachineId>
-    <ticketMachine>
-        <ticketMachine>
-            <id>1</id>
-            <field_A>field_A_0</field_A>
-            <field_B>field_B_0</field_B>
-            <field_C>field_C_0</field_C>
-        </ticketMachine>
-        <ticketMachine>
-            <id>3</id>
-            <field_A>field_A_Update</field_A>
-            <field_B>field_B_Update</field_B>
-            <field_C>field_C_2</field_C>
-        </ticketMachine>
-        <ticketMachine>
-            <id>4</id>
-            <field_A>field_A_3</field_A>
-            <field_B>field_B_3</field_B>
-            <field_C>field_C_3</field_C>
-        </ticketMachine>
-    </ticketMachine>
-</ticketMachineList>
-
-18:58:33.434 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - updated entity: Entity{id=3, field_A=field_A_Update, field_B=field_B_Update, field_C=field_C_2}
-18:58:33.434 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - retrieved entity: Entity{id=3, field_A=field_A_Update, field_B=field_B_Update, field_C=field_C_2}
-18:58:33.434 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - searching for: Entity{id=4, field_A=field_A_3, field_B=field_B_3, field_C=field_C_3}
-18:58:33.434 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - using template : Entity{id=null, field_A=null, field_B=field_B_3, field_C=null}
-18:58:33.434 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - found : Entity{id=4, field_A=field_A_3, field_B=field_B_3, field_C=field_C_3}
+13:39:17.347 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - updated entity: Entity{id=3, location=field_A_Update, schedule=TicketScheduleList{ticketSchedule=[org.kevin.carpark.model.TicketSchedule@33afa13b]}}
+13:39:17.349 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - retrieved entity: Entity{id=3, location=field_A_Update, schedule=TicketScheduleList{ticketSchedule=[org.kevin.carpark.model.TicketSchedule@7a4ccb53]}}
+13:39:17.354 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - searching for: Entity{id=3, location=field_A_Update, schedule=TicketScheduleList{ticketSchedule=[org.kevin.carpark.model.TicketSchedule@309e345f]}}
+13:39:17.355 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.test.TicketMachineDAOJaxbImplTest - using template : Entity{id=null, location=null, schedule=TicketScheduleList{ticketSchedule=[org.kevin.carpark.model.TicketSchedule@309e345f]}}

@@ -4,7 +4,16 @@
     <ticketMachine>
         <ticketMachine>
             <id>1</id>
-            <field_A>testFieldA</field_A>
+            <location>Test</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>1</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
     </ticketMachine>
 </ticketMachineList>

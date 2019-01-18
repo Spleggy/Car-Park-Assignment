@@ -25,10 +25,9 @@
 
     // get request values
     String action = (String) request.getParameter("action");
-    String entityIdReq = (String) request.getParameter("entityId");
-    String entityField_AReq = (String) request.getParameter("field_A");
-    String entityField_BReq = (String) request.getParameter("field_B");
-    String entityField_CReq = (String) request.getParameter("field_C");
+    String ticketMachineIdReq = (String) request.getParameter("Id");
+    String ticketMachineLocation = (String) request.getParameter("location");
+    String ticketMachineSchedule = (String) request.getParameter("schedule");
 
     String errorMessage = "";
 
@@ -37,7 +36,7 @@
 
     if ("modifyTicketMachine".equals(action)) {
         try {
-            ticketMachineId = Integer.parseInt(entityIdReq);
+            ticketMachineId = Integer.parseInt(ticketMachineIdReq);
             ticketMachine = serviceFacade.retrieveTicketMachine(ticketMachineId);
         } catch (Exception e) {
             errorMessage = "problem finding entity " + e.getMessage();
@@ -63,9 +62,9 @@
 <body>
 <% if ("createTicketMachine".equals(action)) {
 %>
-<h1>Add New Ticket Schedule</h1>
+<h1>Add New Ticket Machine</h1>
 <% } else {%>
-<h1>Modify Ticket Schedule <%=ticketMachineId%></h1>
+<h1>Modify Ticket Machine <%=ticketMachineId%></h1>
 <% }%>
 <form action="ListMachines.jsp">
     <table>
@@ -80,32 +79,23 @@
             <td></td>
         </tr>
         <tr>
-            <td>field_A</td>
-            <td><%=ticketMachine.getField_A()%></td>
-            <td><input type="text" name="field_A" value ="<%=ticketMachine.getField_A()%>"></td>
+            <td>Location</td>
+            <td><%=ticketMachine.getLocation()%></td>
+            <td><input type="text" name="location" value ="<%=ticketMachine.getLocation()%>"></td>
         </tr>
-        <tr>
-            <td>field_B</td>
-            <td><%=ticketMachine.getField_B()%></td>
-            <td><input type="text" name="field_B" value ="<%=ticketMachine.getField_B()%>"></td>
-        </tr>
-        <tr>
-            <td>field_C</td>
-            <td><%=ticketMachine.getField_C()%></td>
-            <td><input type="text" name="field_C" value ="<%=ticketMachine.getField_C()%>"></td>
-        </tr>
+
     </table>
     <BR>
     <% if ("createTicketMachine".equals(action)) {
     %>
     <input type="hidden" name="action" value="createTicketMachine">
-    <input type="hidden" name="entityId" value="<%=ticketMachineId%>">
-    <input type="submit" value="Create New Ticket Schedule">
+    <input type="hidden" name="Id" value="<%=ticketMachineId%>">
+    <input type="submit" value="Create New Ticket Machine">
     <% } else if ("modifyTicketMachine".equals(action)) {
     %>
-    <input type="hidden" name="action" value="modifyEntity">
-    <input type="hidden" name="entityId" value="<%=ticketMachineId%>">
-    <input type="submit" value="Modify Ticket Schedule">
+    <input type="hidden" name="action" value="modifyTicketMachine">
+    <input type="hidden" name="Id" value="<%=ticketMachineId%>">
+    <input type="submit" value="Modify Ticket Machine">
     <% }%>
 </form>
 <form action="ListMachines.jsp">

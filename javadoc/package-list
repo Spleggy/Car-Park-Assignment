@@ -1,0 +1,13 @@
+org.kevin.carpark.dao.jaxbimpl
+org.kevin.carpark.dao.jaxbimpl.test
+org.kevin.carpark.model
+org.kevin.carpark.model.test
+org.kevin.carpark.service
+org.kevin.carpark.service.test
+org.kevin.carpark.swingcient
+org.kevin.carpark.swingcient.gui
+org.kevin.carpark.swingcient.test.manual
+org.kevin.carpark.web
+org.kevin.carpark.web.rest
+org.kevin.carpark.web.rest.client
+org.kevin.carpark.web.rest.client.test.manual

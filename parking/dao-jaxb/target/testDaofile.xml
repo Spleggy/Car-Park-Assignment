@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ticketMachineList>
-    <lastTicketMachineId>4</lastTicketMachineId>
+    <lastTicketMachineId>3</lastTicketMachineId>
     <ticketMachine>
         <ticketMachine>
             <id>1</id>
-            <field_A>field_A_0</field_A>
-            <field_B>field_B_0</field_B>
-            <field_C>field_C_0</field_C>
+            <location>Location0</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>0</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
         <ticketMachine>
             <id>3</id>
-            <field_A>field_A_Update</field_A>
-            <field_B>field_B_Update</field_B>
-            <field_C>field_C_2</field_C>
-        </ticketMachine>
-        <ticketMachine>
-            <id>4</id>
-            <field_A>field_A_3</field_A>
-            <field_B>field_B_3</field_B>
-            <field_C>field_C_3</field_C>
+            <location>field_A_Update</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>2</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
     </ticketMachine>
 </ticketMachineList>

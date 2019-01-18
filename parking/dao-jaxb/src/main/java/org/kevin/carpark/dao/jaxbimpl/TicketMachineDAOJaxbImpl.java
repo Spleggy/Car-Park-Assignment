@@ -144,21 +144,17 @@ public class TicketMachineDAOJaxbImpl implements TicketMachineDAO {
                         match = false;
                     }
                 };
-                if (ticketMachineTemplate.getField_A() != null) {
-                    if (!ticketMachineTemplate.getField_A().equals(ticketMachine.getField_A())) {
+                if (ticketMachineTemplate.getLocation() != null) {
+                    if (!ticketMachineTemplate.getLocation().equals(ticketMachine.getLocation())) {
                         match = false;
                     }
-                };
-                if (ticketMachineTemplate.getField_B() != null) {
-                    if (!ticketMachineTemplate.getField_B().equals(ticketMachine.getField_B())) {
+                }
+                if (ticketMachineTemplate.getSchedule() != null) {
+                    if (!ticketMachineTemplate.getSchedule().equals(ticketMachine.getSchedule())) {
                         match = false;
                     }
-                };
-                if (ticketMachineTemplate.getField_C() != null) {
-                    if (!ticketMachineTemplate.getField_C().equals(ticketMachine.getField_C())) {
-                        match = false;
-                    }
-                };
+                }
+
                 if (match) {
                     returnList.add(copy(ticketMachine));
                 }
@@ -178,16 +174,17 @@ public class TicketMachineDAOJaxbImpl implements TicketMachineDAO {
                     boolean changedfield = false;
 
                     // update properties fields if only if entityTemplate field is set
-                    if (ticketMachineTemplate.getField_A() != null) {
-                        en.setField_A(ticketMachineTemplate.getField_A());
+                    if (ticketMachineTemplate.getId() != null) {
+                        en.setId(ticketMachineTemplate.getId());
                         changedfield = true;
                     }
-                    if (ticketMachineTemplate.getField_B() != null) {
-                        en.setField_B(ticketMachineTemplate.getField_B());
+
+                    if (ticketMachineTemplate.getLocation() != null) {
+                        en.setLocation(ticketMachineTemplate.getLocation());
                         changedfield = true;
                     }
-                    if (ticketMachineTemplate.getField_C() != null) {
-                        en.setField_C(ticketMachineTemplate.getField_C());
+                    if (ticketMachineTemplate.getSchedule() != null) {
+                        en.setSchedule(ticketMachineTemplate.getSchedule());
                         changedfield = true;
                     }
                     // save if anything changed

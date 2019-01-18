@@ -49,7 +49,7 @@ public class RestClientJerseyImplTest {
         RestClientJerseyImpl restClient = new RestClientJerseyImpl(baseUrl, mediaType);
 
         TicketMachine entityTempate = new TicketMachine();
-        entityTempate.setField_A("abcd");
+        entityTempate.setLocation("abcd");
 
         // try to retreive an unknown entity
         ReplyMessage replyMessage = restClient.retrieveMatchingEntites(entityTempate);

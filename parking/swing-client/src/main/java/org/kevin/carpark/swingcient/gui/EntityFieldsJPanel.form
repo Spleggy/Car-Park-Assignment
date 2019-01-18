@@ -90,7 +90,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelfield_B">
       <Properties>
-        <Property name="text" type="java.lang.String" value="field_B"/>
+        <Property name="text" type="java.lang.String" value="scheduleList"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField_B">

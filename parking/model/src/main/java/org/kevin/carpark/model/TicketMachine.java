@@ -1,5 +1,7 @@
 package org.kevin.carpark.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,7 +20,8 @@ public class TicketMachine {
 
     private String location = null;
 
-    private List<TicketSchedule> ticketScheduleList = null;
+//    field b is a list of the scheduleList for that machine
+    private TicketScheduleList scheduleList = new TicketScheduleList();
 
     public Integer getId() {
         return id;
@@ -28,27 +31,29 @@ public class TicketMachine {
         this.id = id;
     }
 
-    public String getField_A() {
+    public String getLocation() {
         return location;
     }
 
-    public void setField_A(String location) {
+    public void setLocation(String location) {
         this.location = location;
     }
 
-    public List<TicketSchedule> getField_B() {
-        return ticketScheduleList;
+
+
+    public void setSchedule(TicketScheduleList scheduleList) {
+        this.scheduleList = scheduleList;
     }
 
-    public void setField_B(List<TicketSchedule> ticketScheduleList) {
-        this.ticketScheduleList = ticketScheduleList;
+    public TicketScheduleList getSchedule() {
+        return scheduleList;
     }
 
     @Override
     public String toString() {
         return "Entity{" + "id=" + id
                 + ", location=" + location
-                + ", ticketScheduleList=" + ticketScheduleList + '}';
+                + ", schedule=" + scheduleList + '}';
     }
 
     @Override
@@ -66,13 +71,26 @@ public class TicketMachine {
         if (!Objects.equals(this.location, other.location)) {
             return false;
         }
-        if (!Objects.equals(this.ticketScheduleList, other.ticketScheduleList)) {
+        if (!Objects.equals(this.scheduleList, other.scheduleList)) {
             return false;
         }
+
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
         return true;
+    }
+
+    public void addSchedule(TicketSchedule ticketSchedule)
+    {
+
+        for (TicketSchedule schedule : scheduleList.getTicketSchedules()) {
+            if(schedule.getStartTime().equals(ticketSchedule.getStartTime())){
+                scheduleList.getTicketSchedules().remove(schedule);
+            }
+        }
+        scheduleList.getTicketSchedules().add(ticketSchedule);
+
     }
 
 }

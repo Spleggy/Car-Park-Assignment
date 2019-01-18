@@ -5,22 +5,17 @@
     <ticketMachineList>
         <ticketMachine>
             <ticketMachine>
-                <id>0</id>
-                <field_A>Start Time0</field_A>
-                <field_B>Price Per Hour0</field_B>
-                <field_C>field_C_0</field_C>
-            </ticketMachine>
-            <ticketMachine>
                 <id>1</id>
-                <field_A>Start Time1</field_A>
-                <field_B>Price Per Hour1</field_B>
-                <field_C>field_C_1</field_C>
-            </ticketMachine>
-            <ticketMachine>
-                <id>2</id>
-                <field_A>Start Time2</field_A>
-                <field_B>Price Per Hour2</field_B>
-                <field_C>field_C_2</field_C>
+                <location>Southampton 1</location>
+                <scheduleList>
+                    <scheduleList>
+                        <schedule>
+                            <scheduleId>1</scheduleId>
+                            <startTime>13:00</startTime>
+                            <pricePerHour>10.0</pricePerHour>
+                        </schedule>
+                    </scheduleList>
+                </scheduleList>
             </ticketMachine>
         </ticketMachine>
     </ticketMachineList>

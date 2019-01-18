@@ -26,9 +26,8 @@
     // get request values
     String action = (String) request.getParameter("action");
     String ticketMachineIdReq = (String) request.getParameter("Id");
-    String ticketMachineField_AReq = (String) request.getParameter("field_A");
-    String ticketMachineField_BReq = (String) request.getParameter("field_B");
-    String ticketMachineField_CReq = (String) request.getParameter("field_C");
+    String ticketMachineLocation = (String) request.getParameter("location");
+    String ticketMachineSchedule = (String) request.getParameter("schedule");
 
     String errorMessage = "";
 
@@ -80,31 +79,22 @@
             <td></td>
         </tr>
         <tr>
-            <td>field_A</td>
-            <td><%=ticketMachine.getField_A()%></td>
-            <td><input type="text" name="field_A" value ="<%=ticketMachine.getField_A()%>"></td>
+            <td>Location</td>
+            <td><%=ticketMachine.getLocation()%></td>
+            <td><input type="text" name="location" value ="<%=ticketMachine.getLocation()%>"></td>
         </tr>
-        <tr>
-            <td>field_B</td>
-            <td><%=ticketMachine.getField_B()%></td>
-            <td><input type="text" name="field_B" value ="<%=ticketMachine.getField_B()%>"></td>
-        </tr>
-        <tr>
-            <td>field_C</td>
-            <td><%=ticketMachine.getField_C()%></td>
-            <td><input type="text" name="field_C" value ="<%=ticketMachine.getField_C()%>"></td>
-        </tr>
+
     </table>
     <BR>
     <% if ("createTicketMachine".equals(action)) {
     %>
     <input type="hidden" name="action" value="createTicketMachine">
-    <input type="hidden" name="entityId" value="<%=ticketMachineId%>">
+    <input type="hidden" name="Id" value="<%=ticketMachineId%>">
     <input type="submit" value="Create New Ticket Machine">
     <% } else if ("modifyTicketMachine".equals(action)) {
     %>
     <input type="hidden" name="action" value="modifyTicketMachine">
-    <input type="hidden" name="entityId" value="<%=ticketMachineId%>">
+    <input type="hidden" name="Id" value="<%=ticketMachineId%>">
     <input type="submit" value="Modify Ticket Machine">
     <% }%>
 </form>

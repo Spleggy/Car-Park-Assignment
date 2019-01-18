@@ -1,17 +1,26 @@
-18:58:35.041 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - using dataFile:C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\service\.\target\testfile.xml
-18:58:35.041 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - dataFile does not exist creating new C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\service\.\target\testfile.xml
-18:58:35.041 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+13:39:19.019 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - using dataFile:C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\service\.\target\testfile.xml
+13:39:19.025 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - dataFile does not exist creating new C:\Users\bogto\Desktop\gitrepos\Car-Park-Assignment\parking\service\.\target\testfile.xml
+13:39:19.034 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ticketMachineList>
     <ticketMachine/>
 </ticketMachineList>
 
-18:58:35.057 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+13:39:19.046 [main] DEBUG org.kevin.carpark.dao.jaxbimpl.TicketMachineDAOJaxbImpl - saving xml to file:<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ticketMachineList>
     <lastTicketMachineId>1</lastTicketMachineId>
     <ticketMachine>
         <ticketMachine>
             <id>1</id>
-            <field_A>testFieldA</field_A>
+            <location>Test</location>
+            <scheduleList>
+                <scheduleList>
+                    <schedule>
+                        <scheduleId>1</scheduleId>
+                        <startTime>13:00</startTime>
+                        <pricePerHour>5.0</pricePerHour>
+                    </schedule>
+                </scheduleList>
+            </scheduleList>
         </ticketMachine>
     </ticketMachine>
 </ticketMachineList>

@@ -25,15 +25,15 @@ public class EntityFieldsJPanel extends javax.swing.JPanel {
     public TicketMachine getModelEntity() {
 
         if ("".equals(jTextField_A.getText())) {
-            this.modelEntity.setField_A(null);
+            this.modelEntity.setLocation(null);
         } else {
-            this.modelEntity.setField_A(jTextField_A.getText());
+            this.modelEntity.setLocation(jTextField_A.getText());
         }
 
         if ("".equals(jTextField_B.getText())) {
-            this.modelEntity.setField_B(null);
+            this.modelEntity.setSchedule(null);
         } else {
-            this.modelEntity.setField_B(jTextField_B.getText());
+            this.modelEntity.setSchedule(jTextField_B.getText());
         }
 
         if ("".equals(jTextField_C.getText())) {
@@ -55,8 +55,8 @@ public class EntityFieldsJPanel extends javax.swing.JPanel {
     public void setModelEntity(TicketMachine modelEntity) {
         LOG.debug("setting model entity to " + modelEntity);
         this.modelEntity = modelEntity;
-        jTextField_A.setText(this.modelEntity.getField_A());
-        jTextField_B.setText(this.modelEntity.getField_B());
+        jTextField_A.setText(this.modelEntity.getLocation());
+        jTextField_B.setText(this.modelEntity.getScheduleList());
         jTextField_C.setText(this.modelEntity.getField_C());
 
         String idtxt = (modelEntity.getId() == null) ? null : modelEntity.getId().toString();
@@ -189,12 +189,12 @@ public class EntityFieldsJPanel extends javax.swing.JPanel {
 
     private void jTextField_AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_AActionPerformed
         // TODO add your handling code here:
-        this.modelEntity.setField_A(jTextField_A.getText());
+        this.modelEntity.setLocation(jTextField_A.getText());
     }//GEN-LAST:event_jTextField_AActionPerformed
 
     private void jTextField_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_BActionPerformed
         // TODO add your handling code here:
-        this.modelEntity.setField_B(jTextField_B.getText());
+        this.modelEntity.setSchedule(jTextField_B.getText());
     }//GEN-LAST:event_jTextField_BActionPerformed
 
     private void jTextField_CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_CActionPerformed

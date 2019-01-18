@@ -1,7 +1,9 @@
 org\kevin\carpark\model\RestInterface.class
 org\kevin\carpark\model\TicketMachineList.class
 org\kevin\carpark\model\ServiceFacade.class
+org\kevin\carpark\model\TicketSchedule.class
 org\kevin\carpark\model\TicketMachineDAO.class
+org\kevin\carpark\model\TicketScheduleList.class
 org\kevin\carpark\model\ServiceFactory.class
 org\kevin\carpark\model\ReplyMessage.class
 org\kevin\carpark\model\TicketMachine.class

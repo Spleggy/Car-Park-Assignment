@@ -25,9 +25,7 @@
     // get request values
     String action = (String) request.getParameter("action");
     String ticketMachineIdReq = (String) request.getParameter("Id");
-    String ticketMachineField_AReq = (String) request.getParameter("field_A");
-    String ticketMachineField_BReq = (String) request.getParameter("field_B");
-    String ticketMachineField_CReq = (String) request.getParameter("field_C");
+    String ticketMachineLocation = (String) request.getParameter("location");
 
     String errorMessage = "";
     if ("deleteTicketMachine".equals(action)) {
@@ -39,15 +37,14 @@
         }
     } else if ("modifyTicketMachine".equals(action)) {
         try {
-            Integer id = Integer.parseInt(ticketMachineIdReq);
+            Integer ticketMachineId = Integer.parseInt(ticketMachineIdReq);
             TicketMachine ticketMachineTemplate = new TicketMachine();
-            ticketMachineTemplate.setId(id);
-            ticketMachineTemplate.setField_A(ticketMachineField_AReq);
-            ticketMachineTemplate.setField_B(ticketMachineField_BReq);
-            ticketMachineTemplate.setField_C(ticketMachineField_CReq);
+            ticketMachineTemplate.setId(ticketMachineId);
+            ticketMachineTemplate.setLocation(ticketMachineLocation);
+
             TicketMachine ticketMachine = serviceFacade.updateTicketMachine(ticketMachineTemplate);
             if (ticketMachine == null) {
-                errorMessage = "problem modifying Ticket Machine. could not find ticketMachineId " + id;
+                errorMessage = "problem modifying Ticket Machine. could not find ticketMachineId " + ticketMachineId;
             }
         } catch (Exception e) {
             errorMessage = "problem modifying Ticket Machine " + e.getMessage();
@@ -55,9 +52,8 @@
     } else if ("createTicketMachine".equals(action)) {
         try {
             TicketMachine ticketMachineTemplate = new TicketMachine();
-            ticketMachineTemplate.setField_A(ticketMachineField_AReq);
-            ticketMachineTemplate.setField_B(ticketMachineField_BReq);
-            ticketMachineTemplate.setField_C(ticketMachineField_CReq);
+            ticketMachineTemplate.setLocation(ticketMachineLocation);
+            //ticketMachineTemplate.setSchedule(ticketMachineSchedule);
             TicketMachine ticketMachine = serviceFacade.createTicketMachine(ticketMachineTemplate);
             if (ticketMachine == null) {
                 errorMessage = "problem creating Ticket Machine. Service returned null ";
@@ -65,7 +61,7 @@
         } catch (Exception e) {
             errorMessage = "problem creating Ticket Machine " + e.getMessage();
         }
-    } 
+    }
 
     List<TicketMachine> ticketMachineList = serviceFacade.retrieveAllTicketMachines();
 
@@ -95,11 +91,12 @@
             %>
             <tr>
                 <td><%=ticketMachine.getId()%></td>
-                <td><%=ticketMachine.getField_A()%></td>
-                <td><form action="ListSchedules.jsp">
-                    <input type="hidden" name="action" value="viewTicketSchedules">
+                <td><%=ticketMachine.getLocation()%></td>
+                <td>
+                    <form action="ListSchedules.jsp">
+                    <input type="hidden" name="Id" value="<%=ticketMachine.getId()%>">
                     <input type="submit" value="View Ticket Schedule">
-                </form>
+                    </form>
                 </td>
                 <td>
                     <form action="AddOrModifyMachine.jsp">
@@ -113,10 +110,11 @@
                         <input type="submit" value="Delete Ticket Machine">
                     </form>
                 </td>
+
             </tr>
             <% }%>
 
-        </table> 
+        </table>
         <BR>
         <form action="AddOrModifyMachine.jsp">
             <input type="hidden" name="action" value="createTicketMachine">

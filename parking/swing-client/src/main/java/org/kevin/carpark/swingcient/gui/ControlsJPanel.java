@@ -59,8 +59,8 @@ public class ControlsJPanel extends javax.swing.JPanel {
                 String field_B = jTable1.getValueAt(jTable1.getSelectedRow(), 2).toString();
                 String field_C = jTable1.getValueAt(jTable1.getSelectedRow(), 3).toString();
                 TicketMachine entity = new TicketMachine();
-                entity.setField_A(field_A);
-                entity.setField_B(field_B);
+                entity.setLocation(field_A);
+                entity.setSchedule(field_B);
                 entity.setField_C(field_C);
                 try {
                     entity.setId(Integer.parseInt(entityIdstr));

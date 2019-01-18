@@ -67,9 +67,9 @@ public class EntityListTableModel extends AbstractTableModel {
             case 0:
                 return entity.getId();
             case 1:
-                return entity.getField_A();
+                return entity.getLocation();
             case 2:
-                return entity.getField_B();
+                return entity.getScheduleList();
             case 3:
                 return entity.getField_C();
             default: // Optional
@@ -118,10 +118,10 @@ public class EntityListTableModel extends AbstractTableModel {
                 }
                 break;
             case 1:
-                entity.setField_A(value.toString());
+                entity.setLocation(value.toString());
                 break;
             case 2:
-                entity.setField_B(value.toString());
+                entity.setSchedule(value.toString());
                 break;
             case 3:
                 entity.setField_C(value.toString());

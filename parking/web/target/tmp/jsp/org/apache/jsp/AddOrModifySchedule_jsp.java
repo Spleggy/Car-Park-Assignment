@@ -5,11 +5,9 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import java.util.List;
 import org.kevin.carpark.web.WebObjectFactory;
-import org.kevin.carpark.model.ServiceFactory;
-import org.kevin.carpark.model.ServiceFacade;
-import org.kevin.carpark.model.TicketMachine;
+import org.kevin.carpark.model.*;
 
-public final class AddOrModifyMachine_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class AddOrModifySchedule_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -53,9 +51,6 @@ public final class AddOrModifyMachine_jsp extends org.apache.jasper.runtime.Http
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
 
 
     ServiceFacade serviceFacade = (ServiceFacade) session.getAttribute("serviceFacade");
@@ -70,25 +65,46 @@ public final class AddOrModifyMachine_jsp extends org.apache.jasper.runtime.Http
     // get request values
     String action = (String) request.getParameter("action");
     String ticketMachineIdReq = (String) request.getParameter("Id");
-    String ticketMachineField_AReq = (String) request.getParameter("field_A");
-    String ticketMachineField_BReq = (String) request.getParameter("field_B");
-    String ticketMachineField_CReq = (String) request.getParameter("field_C");
+    String ticketScheduleStart =  (String) request.getParameter("startTime");
+    String ticketSchedulePrice = (String) request.getParameter("pricePerHour");
+    Double schedulePrice = null;
+    schedulePrice = Double.parseDouble(ticketSchedulePrice);
 
+
+    Integer ticketMachineId = Integer.valueOf(ticketMachineIdReq) ;
     String errorMessage = "";
+    TicketMachine ticketMachine;
+    ticketMachine = serviceFacade.retrieveTicketMachine(ticketMachineId);
 
-    TicketMachine ticketMachine = null;
-    Integer ticketMachineId = null;
 
-    if ("modifyTicketMachine".equals(action)) {
+    List<TicketSchedule> scheduleList = ticketMachine.getSchedule().getTicketSchedules();
+
+    Integer scheduleId = scheduleList.size();
+
+    if ("modifySchedule".equals(action)) {
         try {
-            ticketMachineId = Integer.parseInt(ticketMachineIdReq);
-            ticketMachine = serviceFacade.retrieveTicketMachine(ticketMachineId);
+            TicketSchedule ticketSchedule = new TicketSchedule();
+            ticketSchedule.setScheduleId(scheduleId);
+            ticketSchedule.setStartTime(ticketScheduleStart);
+            ticketSchedule.setPricePerHour(schedulePrice);
+
+            ticketMachine.addSchedule(ticketSchedule);
+            serviceFacade.updateTicketMachine(ticketMachine);
         } catch (Exception e) {
             errorMessage = "problem finding entity " + e.getMessage();
         }
-    } else if ("createTicketMachine".equals(action)) {
+    } else if ("createSchedule".equals(action)) {
         try {
-            ticketMachine = new TicketMachine();
+
+            TicketSchedule ticketSchedule = new TicketSchedule();
+            ticketSchedule.setScheduleId(scheduleId);
+            ticketSchedule.setStartTime(ticketScheduleStart);
+            ticketSchedule.setPricePerHour(schedulePrice);
+
+            ticketMachine.addSchedule(ticketSchedule);
+
+            serviceFacade.updateTicketMachine(ticketMachine);
+
         } catch (Exception e) {
             errorMessage = "problem finding entity " + e.getMessage();
         }
@@ -97,92 +113,69 @@ public final class AddOrModifyMachine_jsp extends org.apache.jasper.runtime.Http
     }
 
 
+
+
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\">\r\n");
-      out.write("    <title>Edit Machine</title>\r\n");
+      out.write("    <title>Edit Schedule</title>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
- if ("createTicketMachine".equals(action)) {
+ if ("createSchedule".equals(action)) {
 
       out.write("\r\n");
-      out.write("<h1>Add New Ticket Machine</h1>\r\n");
+      out.write("<h1>Add New Schedule</h1>\r\n");
  } else {
       out.write("\r\n");
-      out.write("<h1>Modify Ticket Machine ");
-      out.print(ticketMachineId);
+      out.write("<h1>Modify Schedule for Ticket Machine ");
+      out.print(Integer.parseInt(ticketMachineIdReq));
       out.write("</h1>\r\n");
  }
       out.write("\r\n");
-      out.write("<form action=\"ListMachines.jsp\">\r\n");
+      out.write("<form action=\"ListSchedules.jsp\">\r\n");
       out.write("    <table>\r\n");
       out.write("        <tr>\r\n");
-      out.write("            <th>Field</th>\r\n");
-      out.write("            <th>Current Value</th>\r\n");
-      out.write("            <th>New Value</th>\r\n");
+      out.write("            <th>Start Time</th>\r\n");
+      out.write("            <th>Price (per hour)</th>\r\n");
       out.write("        </tr>\r\n");
+      out.write("\r\n");
       out.write("        <tr>\r\n");
-      out.write("            <td>Ticket Machine Id</td>\r\n");
-      out.write("            <td>");
-      out.print(ticketMachine.getId());
-      out.write("</td>\r\n");
-      out.write("            <td></td>\r\n");
+      out.write("            <td><input type=\"text\" name=\"startTime\" value=\"\"></td>\r\n");
+      out.write("            <td><input type=\"text\" name=\"pricePerHour\" value=\"\"></td>\r\n");
       out.write("        </tr>\r\n");
-      out.write("        <tr>\r\n");
-      out.write("            <td>field_A</td>\r\n");
-      out.write("            <td>");
-      out.print(ticketMachine.getField_A());
-      out.write("</td>\r\n");
-      out.write("            <td><input type=\"text\" name=\"field_A\" value =\"");
-      out.print(ticketMachine.getField_A());
-      out.write("\"></td>\r\n");
-      out.write("        </tr>\r\n");
-      out.write("        <tr>\r\n");
-      out.write("            <td>field_B</td>\r\n");
-      out.write("            <td>");
-      out.print(ticketMachine.getField_B());
-      out.write("</td>\r\n");
-      out.write("            <td><input type=\"text\" name=\"field_B\" value =\"");
-      out.print(ticketMachine.getField_B());
-      out.write("\"></td>\r\n");
-      out.write("        </tr>\r\n");
-      out.write("        <tr>\r\n");
-      out.write("            <td>field_C</td>\r\n");
-      out.write("            <td>");
-      out.print(ticketMachine.getField_C());
-      out.write("</td>\r\n");
-      out.write("            <td><input type=\"text\" name=\"field_C\" value =\"");
-      out.print(ticketMachine.getField_C());
-      out.write("\"></td>\r\n");
-      out.write("        </tr>\r\n");
+      out.write("\r\n");
       out.write("    </table>\r\n");
       out.write("    <BR>\r\n");
+      out.write("</form>\r\n");
       out.write("    ");
- if ("createTicketMachine".equals(action)) {
+ if ("createSchedule".equals(action)) {
     
       out.write("\r\n");
-      out.write("    <input type=\"hidden\" name=\"action\" value=\"createTicketMachine\">\r\n");
-      out.write("    <input type=\"hidden\" name=\"entityId\" value=\"");
-      out.print(ticketMachineId);
+      out.write("    <input type=\"hidden\" name=\"action\" value=\"createSchedule\">\r\n");
+      out.write("    <input type=\"hidden\" name=\"Id\" value=\"");
+      out.print( ticketMachineId);
       out.write("\">\r\n");
-      out.write("    <input type=\"submit\" value=\"Create New Ticket Machine\">\r\n");
+      out.write("    <input type=\"submit\" value=\"Create New Schedule\">\r\n");
       out.write("    ");
- } else if ("modifyTicketMachine".equals(action)) {
+ } else if ("modifySchedule".equals(action)) {
     
       out.write("\r\n");
-      out.write("    <input type=\"hidden\" name=\"action\" value=\"modifyTicketMachine\">\r\n");
-      out.write("    <input type=\"hidden\" name=\"entityId\" value=\"");
+      out.write("    <input type=\"hidden\" name=\"action\" value=\"modifySchedule\">\r\n");
+      out.write("    <input type=\"hidden\" name=\"Id\" value=\"");
       out.print(ticketMachineId);
       out.write("\">\r\n");
-      out.write("    <input type=\"submit\" value=\"Modify Ticket Machine\">\r\n");
+      out.write("    <input type=\"submit\" value=\"Modify Schedule\">\r\n");
       out.write("    ");
  }
       out.write("\r\n");
-      out.write("</form>\r\n");
-      out.write("<form action=\"ListMachines.jsp\">\r\n");
+      out.write("\r\n");
+      out.write("<form action=\"ListSchedules.jsp\">\r\n");
+      out.write("    <input type=\"hidden\" name=\"Id\" value=\"");
+      out.print(ticketMachineId);
+      out.write("\">\r\n");
       out.write("    <input type=\"submit\" value=\"Cancel and Return\">\r\n");
       out.write("</form>\r\n");
       out.write("</body>\r\n");

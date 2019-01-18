@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ticketMachineList>
-    <lastTicketMachineId>5</lastTicketMachineId>
+    <lastTicketMachineId>2</lastTicketMachineId>
     <ticketMachine>
         <ticketMachine>
-            <id>5</id>
-            <field_A>1</field_A>
-            <field_B>2</field_B>
-            <field_C>3</field_C>
+            <id>2</id>
+            <location>9</location>
+            <scheduleList>
+                <scheduleList/>
+            </scheduleList>
         </ticketMachine>
     </ticketMachine>
 </ticketMachineList>

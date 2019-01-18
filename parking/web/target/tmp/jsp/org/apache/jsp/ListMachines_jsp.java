@@ -69,9 +69,7 @@ public final class ListMachines_jsp extends org.apache.jasper.runtime.HttpJspBas
     // get request values
     String action = (String) request.getParameter("action");
     String ticketMachineIdReq = (String) request.getParameter("Id");
-    String ticketMachineField_AReq = (String) request.getParameter("field_A");
-    String ticketMachineField_BReq = (String) request.getParameter("field_B");
-    String ticketMachineField_CReq = (String) request.getParameter("field_C");
+    String ticketMachineLocation = (String) request.getParameter("location");
 
     String errorMessage = "";
     if ("deleteTicketMachine".equals(action)) {
@@ -83,15 +81,14 @@ public final class ListMachines_jsp extends org.apache.jasper.runtime.HttpJspBas
         }
     } else if ("modifyTicketMachine".equals(action)) {
         try {
-            Integer id = Integer.parseInt(ticketMachineIdReq);
+            Integer ticketMachineId = Integer.parseInt(ticketMachineIdReq);
             TicketMachine ticketMachineTemplate = new TicketMachine();
-            ticketMachineTemplate.setId(id);
-            ticketMachineTemplate.setField_A(ticketMachineField_AReq);
-            ticketMachineTemplate.setField_B(ticketMachineField_BReq);
-            ticketMachineTemplate.setField_C(ticketMachineField_CReq);
+            ticketMachineTemplate.setId(ticketMachineId);
+            ticketMachineTemplate.setLocation(ticketMachineLocation);
+
             TicketMachine ticketMachine = serviceFacade.updateTicketMachine(ticketMachineTemplate);
             if (ticketMachine == null) {
-                errorMessage = "problem modifying Ticket Machine. could not find ticketMachineId " + id;
+                errorMessage = "problem modifying Ticket Machine. could not find ticketMachineId " + ticketMachineId;
             }
         } catch (Exception e) {
             errorMessage = "problem modifying Ticket Machine " + e.getMessage();
@@ -99,9 +96,8 @@ public final class ListMachines_jsp extends org.apache.jasper.runtime.HttpJspBas
     } else if ("createTicketMachine".equals(action)) {
         try {
             TicketMachine ticketMachineTemplate = new TicketMachine();
-            ticketMachineTemplate.setField_A(ticketMachineField_AReq);
-            ticketMachineTemplate.setField_B(ticketMachineField_BReq);
-            ticketMachineTemplate.setField_C(ticketMachineField_CReq);
+            ticketMachineTemplate.setLocation(ticketMachineLocation);
+            //ticketMachineTemplate.setSchedule(ticketMachineSchedule);
             TicketMachine ticketMachine = serviceFacade.createTicketMachine(ticketMachineTemplate);
             if (ticketMachine == null) {
                 errorMessage = "problem creating Ticket Machine. Service returned null ";
@@ -109,7 +105,7 @@ public final class ListMachines_jsp extends org.apache.jasper.runtime.HttpJspBas
         } catch (Exception e) {
             errorMessage = "problem creating Ticket Machine " + e.getMessage();
         }
-    } 
+    }
 
     List<TicketMachine> ticketMachineList = serviceFacade.retrieveAllTicketMachines();
 
@@ -147,12 +143,15 @@ public final class ListMachines_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.print(ticketMachine.getId());
       out.write("</td>\r\n");
       out.write("                <td>");
-      out.print(ticketMachine.getField_A());
+      out.print(ticketMachine.getLocation());
       out.write("</td>\r\n");
-      out.write("                <td><form action=\"ListSchedules.jsp\">\r\n");
-      out.write("                    <input type=\"hidden\" name=\"action\" value=\"viewTicketSchedules\">\r\n");
+      out.write("                <td>\r\n");
+      out.write("                    <form action=\"ListSchedules.jsp\">\r\n");
+      out.write("                    <input type=\"hidden\" name=\"Id\" value=\"");
+      out.print(ticketMachine.getId());
+      out.write("\">\r\n");
       out.write("                    <input type=\"submit\" value=\"View Ticket Schedule\">\r\n");
-      out.write("                </form>\r\n");
+      out.write("                    </form>\r\n");
       out.write("                </td>\r\n");
       out.write("                <td>\r\n");
       out.write("                    <form action=\"AddOrModifyMachine.jsp\">\r\n");
@@ -170,12 +169,13 @@ public final class ListMachines_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                        <input type=\"submit\" value=\"Delete Ticket Machine\">\r\n");
       out.write("                    </form>\r\n");
       out.write("                </td>\r\n");
+      out.write("\r\n");
       out.write("            </tr>\r\n");
       out.write("            ");
  }
       out.write("\r\n");
       out.write("\r\n");
-      out.write("        </table> \r\n");
+      out.write("        </table>\r\n");
       out.write("        <BR>\r\n");
       out.write("        <form action=\"AddOrModifyMachine.jsp\">\r\n");
       out.write("            <input type=\"hidden\" name=\"action\" value=\"createTicketMachine\">\r\n");

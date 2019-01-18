@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
 import org.kevin.carpark.model.TicketMachine;
 import org.kevin.carpark.model.ServiceFacade;
 import org.kevin.carpark.model.ServiceFactory;
+import org.kevin.carpark.model.TicketSchedule;
 import org.kevin.carpark.service.ServiceFactoryImpl;
 
 /**
@@ -36,10 +37,22 @@ public class ServiceFacadeImplTest {
         serviceFacade.deleteAllTicketMachines();
 
         TicketMachine ticketMachine = new TicketMachine();
-        ticketMachine.setField_A("testFieldA");
+        ticketMachine.setId(1);
+        ticketMachine.setLocation("Test");
 
-        serviceFacade.createTicketMachine(ticketMachine);
-        List<TicketMachine> retrievedEntities = serviceFacade.retrieveMatchingTicketMachines(ticketMachine);
+        TicketSchedule schedule1 = new TicketSchedule();
+        schedule1.setScheduleId(1);
+        schedule1.setStartTime("13:00");
+        schedule1.setPricePerHour(5.00);
+
+        ticketMachine.addSchedule(schedule1);
+
+        TicketMachine e = serviceFacade.createTicketMachine(ticketMachine);
+
+        List<TicketMachine> retrievedEntities = serviceFacade.retrieveMatchingTicketMachines(e);
+
+
+
 
         assertEquals(1, retrievedEntities.size());
     }
